@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Contact from './components/Contact';
-
+import firebaseApp from "./firebase";
 function App() {
   return (
     <Router>
