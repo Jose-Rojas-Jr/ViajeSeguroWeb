@@ -8,7 +8,7 @@ const Home = () => {
       <section id="home" className="section home">
         <div className="content">
            <div className="image-container">
-             <img src="src/assets/Logo.png" alt="Logo de ViajeSeguro" />
+             <img src="https://i.ibb.co/xtN8mjLv/logo.png" alt="Logo de ViajeSeguro" />
            </div>
           <h1>Tu viaje, más seguro que nunca.</h1>
           <p>ViajeSeguro te conecta con conductores confiables para que llegues a tu destino con tranquilidad.</p>
@@ -28,7 +28,7 @@ const Home = () => {
       <section id="scope" className="section scope">
         <div className="content">
           <div className="image-container">
-             <img src="src/assets/inf.png" alt="Logo de ViajeSeguro" />
+             <img src="https://i.ibb.co/6cr9PcVC/inf.png" alt="Inf ViajeSeguro" />
            </div>
           <h1>Alcance del Servicio</h1>
           <p>ViajeSeguro no solo es un servicio de transporte, sino una solución innovadora para quienes buscan viajar con tranquilidad y seguridad, respaldados por tecnología y protocolos diseñados para la protección de cada pasajero.</p>
@@ -59,7 +59,7 @@ const Home = () => {
        <section id="about" className="section about">
         <div className="content">
           <div className="image-container">
-             <img src="src/assets/Logo.png" alt="Logo de ViajeSeguro" />
+             <img src="https://i.ibb.co/xtN8mjLv/logo.png" alt="Inf ViajeSeguro" />
            </div>
           <h1>Sobre Nosotros</h1>
           <p><strong>Misión:</strong> Hacer del transporte privado una experiencia segura y confiable.</p>
