@@ -1,0 +1,121 @@
+/* index.css */
+/* Estilos globales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e7e4e4;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+a {
+  color: #50E3C2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4A90E2;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1a1a1a;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  color: #50E3C2;
+}
+
+/* Home */
+
+
+.home h1 {
+  font-size: 2.8rem;
+  color: #50E3C2;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: #B0B0B0;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: #B0B0B0;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #50E3C2;
+}
+
+.footer a:hover {
+  color: #4A90E2;
+}
+
+/* Contacto */
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+}
+
+.contact-container h2 {
+  color: #50E3C2;
+}
+
+.contact-container p {
+  color: #B0B0B0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Para pantallas grandes (laptop o PC) 
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+}
+
+/* Para tabletas 
+@media (max-width: 1023px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Para móviles 
+@media (max-width: 767px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+*/

@@ -1,0 +1,83 @@
+:root {
+    --primary-color: #28a58f;
+    --secondary-color: #313940;
+    --background-light: #F2F2F2;
+    --accent-color: #038C65;
+  }
+  
+  /* Contenedor principal */
+  .home-about {
+    width: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  /* Estilo base para ambas secciones */
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 50px;
+  }
+  
+  /* Sección Home */
+  .home {
+    background: linear-gradient(to right, #075E54, #15202B);
+    color: white;
+  }
+  .home h1 {
+    font-size: 2.5rem;
+  }
+  
+  .home button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .home button:hover {
+    background-color: var(--accent-color);
+  }
+    /* seccion service*/
+    .description {
+        background-color: #FEFFFE;
+        color: var(--secondary-color);
+      }
+
+    .scope {
+        background-color: #F3F5F6;
+        color: #15202B;
+    }
+
+    .revenue {
+        background-color: #FEFFFE;
+        color: var(--secondary-color);
+      }
+
+
+  /* Sección About */
+  .about {
+    background-color: var(--background-light);
+    color: var(--secondary-color);
+  }
+  
+  .content {
+    max-width: 60%;
+  }
+  
+  .image-container {
+    margin-left: 25%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    max-width: 600px; /* Ajusta según el tamaño deseado */
+    border-radius: 10px;
+  }

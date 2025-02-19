@@ -1,0 +1,85 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  --primary-color: #2FE2C1;
+  --secondary-color: #313940;
+  --light-background: #F2F2F2;
+  --dark-green: #038C65;
+  --medium-green: #1FBF92;
+  --text-color: #313940;
+  --font-family: 'Arial', sans-serif;
+  
+}
+
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-background);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Home */
+.home {
+  text-align: center;
+  padding: 50px;
+}
+
+.home h1 {
+  color: var(--primary-color);
+}
+
+/* Contact */
+.contact {
+  padding: 50px;
+  background-color: var(--dark-green);
+  color: rgb(55, 50, 50);
+  text-align: center;
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .home, .about, .contact {
+    padding: 30px;
+  }
+}

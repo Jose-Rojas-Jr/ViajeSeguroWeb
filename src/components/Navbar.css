@@ -1,0 +1,28 @@
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+  }
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    color: var(--background-light);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    color: var(--highlight-color);
+  }
+  
