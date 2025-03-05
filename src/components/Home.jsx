@@ -12,7 +12,10 @@
             </div>
             <h1>  Tu viaje, más seguro que nunca</h1>
             <p>ViajeSeguro te conecta con conductores confiables para que llegues a tu destino con tranquilidad.</p>
-            <button>Comenzar</button>
+            <a href="https://play.google.com/store/games?hl=es_419">
+  <button>Comenzar</button>
+</a>
+
           </div>
         </section>
 
