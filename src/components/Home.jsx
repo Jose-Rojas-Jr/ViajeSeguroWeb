@@ -10,7 +10,7 @@
             <div className="image-container">
               <img src="https://i.ibb.co/xtN8mjLv/logo.png" alt="Logo de ViajeSeguro" />
             </div>
-            <h1>Tu viaje, más seguro que nunca.</h1>
+            <h1>  Tu viaje, más seguro que nunca</h1>
             <p>ViajeSeguro te conecta con conductores confiables para que llegues a tu destino con tranquilidad.</p>
             <button>Comenzar</button>
           </div>
