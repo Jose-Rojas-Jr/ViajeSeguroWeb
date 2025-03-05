@@ -19,8 +19,12 @@
         {/* Sección Descripción del Servicio */}
         <section id="service" className="section description">
           <div className="content">
+            
             <h1>Descripción del Servicio</h1>
             <p>ViajeSeguro es una plataforma de movilidad segura diseñada para brindar confianza y protección en cada viaje. Su enfoque principal es garantizar la seguridad de los pasajeros, especialmente mujeres, niños y adultos mayores, mediante servicios especializados y herramientas de monitoreo en tiempo real.</p>
+            <div className="image-container">
+              <img src="https://i.ibb.co/0jSwGs35/pixelcut-export-2.jpg" alt="Logo de ViajeSeguro" />
+            </div>         
           </div>
         </section>
 
@@ -47,21 +51,36 @@
 <section id="revenue" className="section revenue">
   <div className="content">
     <h2>Planes de Membresía</h2>
-    <p>Diseñados para clientes que requieren servicios recurrentes con beneficios adicionales.</p>
+    <p>Elige el plan que mejor se adapte a tus necesidades de transporte.</p>
     
     <div className="plans-container">
-      <div className="plan-card">
+      <div className="plan-card family">
         <h3>Plan Familiar</h3>
-        <p>Incluye transporte para hasta 5 personas dentro de una misma cuenta, acceso a GPS y monitoreo en tiempo real.</p>
+        <p>***************************</p>
+        <p> Transporte para hasta 5 personas dentro de una misma cuenta.</p>
+        <p> 4 viajes diarios personalizados (2 rutas fijas y 2 rutas alternas).</p>
+        <p> Acceso en tiempo real a GPS y cámara del vehículo.</p>
+        <p> Contacto directo con el conductor asignado.</p>
+        <p> Botón de emergencia para notificación inmediata.</p>
+        <p className="price">Bs 800 <span>/ mes</span></p>
+        
       </div>
 
-      <div className="plan-card">
+      <div className="plan-card executive">
         <h3>Plan Ejecutivo</h3>
-        <p>Transporte personalizado para profesionales y ejecutivos con vehículos premium y atención prioritaria.</p>
+        <p>***************************</p>
+        <p> Transporte personalizado para máximo 2 personas.</p>
+        <p> 3 viajes diarios a oficinas, reuniones, aeropuerto y uno personalizado.</p>
+        <p> Vehículos premium con conductores certificados.</p>
+        <p> Acceso en tiempo real a GPS y monitoreo.</p>
+        <p>  Atención prioritaria en reservas.</p>
+        <p className="price">Bs 500 <span>/ mes</span></p>
+        
       </div>
     </div>
   </div>
 </section>
+
 
 
         {/* Sección About */}
