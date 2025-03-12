@@ -1,107 +1,101 @@
-  import React from 'react';
-  import './Home.css';
+import React from 'react';
+import './Home.css';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import { FaShieldAlt, FaUserCheck, FaMapMarkedAlt, FaDownload, FaCar, FaMap, FaPhone, FaMoneyBill, FaUsers, FaBuilding, FaExclamationTriangle } from 'react-icons/fa';
 
-  const Home = () => {
-    return (
-      <div className="home-about">
-        {/* Sección Home */}
-        <section id="home" className="section home">
-          <div className="content">
-            <div className="image-container">
-              <img src="https://i.ibb.co/xtN8mjLv/logo.png" alt="Logo de ViajeSeguro" />
-            </div>
-            <h1>  Tu viaje, más seguro que nunca</h1>
-            <p>ViajeSeguro te conecta con conductores confiables para que llegues a tu destino con tranquilidad.</p>
-            <a href="https://play.google.com/store/games?hl=es_419">
-  <button>Comienza tu viaje seguro ya !!!</button>
-  <p>descarga la aplicacion en la play store</p>
-</a>
-
+const Home = () => {
+  return (
+    <div className="home-container">
+      <Navbar />
+      
+      {/* Sección Hero */}
+      <section id="home" className="hero">
+        <div className="hero-content">
+          <h1>Tu viaje, más seguro que nunca</h1>
+          <p>ViajeSeguro te conecta con conductores verificados para que llegues a tu destino con tranquilidad.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.viajeseguro" className="download-button">
+            <button>Descargar en Play Store</button>
+          </a>
+        </div>
+        <div className="hero-image">
+          <img src="https://i.ibb.co/xtN8mjLv/logo.png" alt="Viaje Seguro" />
+        </div>
+      </section>
+      
+      {/* Sección ¿Cómo funciona? */}
+      <section className="how-it-works">
+        <h2>¿Cómo funciona?</h2>
+        <div className="steps">
+          <div className="step">
+            <FaDownload size={40} className="icon" />
+            <h3>Descarga la App</h3>
+            <p>Regístrate en minutos y accede a todas las funciones.</p>
           </div>
-        </section>
-
-        {/* Sección Descripción del Servicio */}
-        <section id="service" className="section description">
-          <div className="content">
-            
-            <h1>Descripción del Servicio</h1>
-            <p>ViajeSeguro es una plataforma de movilidad segura diseñada para brindar confianza y protección en cada viaje. Su enfoque principal es garantizar la seguridad de los pasajeros, especialmente mujeres, niños y adultos mayores, mediante servicios especializados y herramientas de monitoreo en tiempo real.</p>
-            <div className="image-container">
-              <img src="https://i.ibb.co/0jSwGs35/pixelcut-export-2.jpg" alt="Logo de ViajeSeguro" />
-            </div>         
+          <div className="step">
+            <FaCar size={40} className="icon" />
+            <h3>Solicita un Viaje</h3>
+            <p>Elige un conductor verificado y prepárate para el viaje.</p>
           </div>
-        </section>
-
-        {/* Sección Alcance del Servicio */}
-        <section id="scope" className="section scope">
-          <div className="content">
-            <div className="image-container">
-              <img src="https://i.ibb.co/6cr9PcVC/inf.png" alt="Inf ViajeSeguro" />
-            </div>
-            <h1>Alcance del Servicio</h1>
-            <p>ViajeSeguro no solo es un servicio de transporte, sino una solución innovadora para quienes buscan viajar con tranquilidad y seguridad, respaldados por tecnología y protocolos diseñados para la protección de cada pasajero.</p>
-            <p>El servicio ofrece:</p>
-            <ul>
-              <li>Conductores certificados y especializados.</li>
-              <li>Monitoreo en tiempo real.</li>
-              <li>Botón de emergencia.</li>
-              <li>Membresías personalizadas.</li>
-              <li>Opciones especializadas de transporte.</li>
-            </ul>
+          <div className="step">
+            <FaMap size={40} className="icon" />
+            <h3>Viaja con Seguridad</h3>
+            <p>Monitorea el trayecto en tiempo real y llega seguro a tu destino.</p>
           </div>
-        </section>
-
-        {/* Sección Modelos de Ingreso */}
-<section id="revenue" className="section revenue">
-  <div className="content">
-    <h2>Planes de Membresía</h2>
-    <p>Elige el plan que mejor se adapte a tus necesidades de transporte.</p>
-    
-    <div className="plans-container">
-      <div className="plan-card family">
-        <h3>Plan Familiar</h3>
-        <p>***************************</p>
-        <p> Transporte para hasta 5 personas dentro de una misma cuenta.</p>
-        <p> 4 viajes diarios personalizados (2 rutas fijas y 2 rutas alternas).</p>
-        <p> Acceso en tiempo real a GPS y cámara del vehículo.</p>
-        <p> Contacto directo con el conductor asignado.</p>
-        <p> Botón de emergencia para notificación inmediata.</p>
-        <p className="price">Bs 800 <span>/ mes</span></p>
-        
-      </div>
-
-      <div className="plan-card executive">
-        <h3>Plan Ejecutivo</h3>
-        <p>***************************</p>
-        <p> Transporte personalizado para máximo 2 personas.</p>
-        <p> 3 viajes diarios a oficinas, reuniones, aeropuerto y uno personalizado.</p>
-        <p> Vehículos premium con conductores certificados.</p>
-        <p> Acceso en tiempo real a GPS y monitoreo.</p>
-        <p>  Atención prioritaria en reservas.</p>
-        <p className="price">Bs 500 <span>/ mes</span></p>
-        
-      </div>
+        </div>
+      </section>
+      
+      {/* Sección Seguridad */}
+      <section className="security-section">
+        <h2>Tu seguridad es nuestra prioridad</h2>
+        <div className="security-features">
+          <div className="feature">
+            <FaShieldAlt size={40} className="icon" />
+            <h3>Conductores Verificados</h3>
+            <p>Todos nuestros conductores pasan una verificación de identidad y antecedentes.</p>
+          </div>
+          <div className="feature">
+            <FaUserCheck size={40} className="icon" />
+            <h3>Monitoreo en Tiempo Real</h3>
+            <p>Ubicación GPS y cámaras en el vehículo para mayor seguridad.</p>
+          </div>
+          <div className="feature">
+            <FaExclamationTriangle size={40} className="icon" />
+            <h3>Botón de Emergencia</h3>
+            <p>Disponible en la app y físicamente en el vehículo.</p>
+          </div>
+        </div>
+      </section>
+      
+      {/* Sección Planes de Membresía */}
+      <section className="membership-section">
+        <h2>Planes de Membresía</h2>
+        <div className="membership-options">
+          <div className="membership">
+            <FaUsers size={40} className="icon" />
+            <h3>Familiar</h3>
+            <p>Transporte seguro para hasta 5 personas con seguimiento en vivo.</p>
+          </div>
+          <div className="membership">
+            <FaBuilding size={40} className="icon" />
+            <h3>Empresarial</h3>
+            <p>Movilidad segura para empleados con tarifas especiales.</p>
+          </div>
+        </div>
+      </section>
+      
+      {/* Sección Descarga la App */}
+      <section className="cta">
+        <h2>Descarga ViajeSeguro hoy mismo</h2>
+        <p>Empieza a viajar con total confianza y seguridad.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.viajeseguro">
+          <button>Descargar Ahora</button>
+        </a>
+      </section>
+      
+      <Footer />
     </div>
-  </div>
-</section>
+  );
+};
 
-
-
-        {/* Sección About */}
-        <section id="about" className="section about">
-          <div className="content">
-            <div className="image-container">
-              <img src="https://i.ibb.co/xtN8mjLv/logo.png" alt="Inf ViajeSeguro" />
-            </div>
-            <h1>Sobre Nosotros</h1>
-            <p><strong>Misión:</strong> Hacer del transporte privado una experiencia segura y confiable.</p>
-            <p><strong>Visión:</strong> Ser la plataforma de transporte más segura en América Latina.</p>
-            <p><strong>Valores:</strong> Seguridad, Confianza, Innovación.</p>
-          </div>
-        </section>
-      </div>
-    );
-
-  };
-
-  export default Home;
+export default Home;

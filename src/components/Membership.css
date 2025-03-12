@@ -1,0 +1,128 @@
+/* Estilos generales */
+.membership-container {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .membership-hero {
+    padding: 50px;
+    background: linear-gradient(to right, #28a58f, #038C65);
+    color: white;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .membership-hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .membership-hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Lista de Membresías */
+  .membership-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+  }
+  
+  .membership {
+    max-width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+  
+  .membership:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .membership-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    color: #28a58f;
+    margin-bottom: 10px;
+  }
+  
+  .membership p {
+    font-size: 1.1rem;
+  }
+  
+  /* Comparación de Planes */
+  .comparison-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .comparison-table th, .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .comparison-table th {
+    background-color: #28a58f;
+    color: white;
+  }
+  
+  /* FAQ */
+  .faq-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .faq {
+    padding: 50px;
+    background: white;
+    text-align: center;
+  }
+  
+  details {
+    margin: 10px auto;
+    max-width: 600px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  details summary {
+    font-weight: bold;
+    color: #28a58f;
+  }

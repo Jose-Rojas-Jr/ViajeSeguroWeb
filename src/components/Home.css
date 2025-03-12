@@ -1,153 +1,153 @@
-/* Importar fuente llamativa */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-/* Variables de colores */
-:root {
-  --primary-color: #28a58f;
-  --secondary-color: #313940;
-  --background-light: #F2F2F2;
-  --accent-color: #038C65;
-}
-
 /* Estilos generales */
-body {
+.home-container {
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--background-light);
-  color: var(--secondary-color);
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-/* Secciones */
-.section {
+/* Hero Section */
+.hero {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
+  justify-content: space-between;
   padding: 50px;
-}
-
-/* Home Section */
-.home {
-  background: linear-gradient(to right, #075E54, #d5dbe2);
+  background: linear-gradient(to right, #28a58f, #038C65);
   color: white;
 }
-.home p {
-  color: #313940;
-}
-.home h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
 
-.home button {
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 15px 30px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-  color: white;
-  transition: transform 0.2s, box-shadow 0.3s;
-}
-
-.home button:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to right, var(--accent-color), var(--primary-color));
-}
-
-/* Sección About */
-.about {
-  background-color: var(--background-light);
-  color: var(--secondary-color);
-}
-
-.content {
-  max-width: 60%;
-}
-
-/* Estilos para la imagen */
-.image-container {
-  margin-left: 25%;
+.hero-content {
   max-width: 50%;
-  display: flex;
-  justify-content: center;
+  text-align: left;
 }
 
-.image-container img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-/* Estilos para los Planes */
-.plans-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.plan-card {
-  width: 40%;
-  background: linear-gradient(to bottom, #fff, var(--background-light));
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s;
-  border: 2px solid var(--primary-color);
-}
-
-.plan-card:hover {
-  transform: translateY(-10px);
-}
-
-.plan-card h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--accent-color);
-}
-
-.plan-card p {
+.hero-content p {
   font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-.plan-card .price {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--primary-color);
   margin: 20px 0;
 }
 
-.plan-card button {
-  font-size: 1.2rem;
-  font-weight: 600;
-  padding: 15px 30px;
-  border-radius: 10px;
+.download-button button {
+  background-color: white;
+  color: #28a58f;
+  padding: 10px 20px;
   border: none;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-  color: white;
-  transition: transform 0.2s, box-shadow 0.3s;
+  transition: 0.3s;
 }
 
-.plan-card button:hover {
+.download-button button:hover {
+  background-color: #fff;
+  color: #038C65;
   transform: scale(1.05);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to right, var(--accent-color), var(--primary-color));
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  .plan-card {
-    width: 80%;
-  }
+.hero-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Sección ¿Cómo funciona? */
+.how-it-works {
+  padding: 50px;
+  background: white;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.step {
+  text-align: center;
+  max-width: 300px;
+}
+
+/* Seguridad Section */
+.security-section {
+  padding: 50px;
+  background: white;
+}
+
+.security-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature {
+  max-width: 300px;
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.feature:hover {
+  background: #e0e0e0;
+  transform: translateY(-5px);
+}
+
+.icon {
+  color: #28a58f;
+  margin-bottom: 10px;
+}
+
+/* Membresía */
+.membership-section {
+  padding: 50px;
+  background: #f8f9fa;
+}
+
+.membership-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.membership {
+  max-width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.membership:hover {
+  background: #e0e0e0;
+  transform: translateY(-5px);
+}
+
+/* Sección Descarga la App */
+.cta {
+  padding: 50px;
+  background: #28a58f;
+  color: white;
+}
+
+.cta button {
+  background: white;
+  color: #28a58f;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.cta button:hover {
+  background: #fff;
+  color: #038C65;
+  transform: scale(1.05);
 }

@@ -1,10 +1,9 @@
+/* Sección About */
 .about {
-    padding: 40px;
-    text-align: center;
-    background-color: var(--background-light);
-  }
-  
-  .about h1 {
-    color: var(--secondary-color);
-  }
-  
+  background-color: var(--background-light);
+  color: var(--secondary-color);
+}
+
+.content {
+  max-width: 60%;
+}

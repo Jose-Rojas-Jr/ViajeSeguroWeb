@@ -1,15 +1,97 @@
-.contact {
-    padding: 40px;
-    text-align: center;
-    background-color: var(--background-light);
-  }
-  
-  .contact ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact li {
-    font-size: 1.2rem;
-  }
-  
+/* Estilos generales */
+.contacto-container {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Sección Hero */
+.contacto-hero {
+  padding: 50px;
+  background: linear-gradient(to right, #28a58f, #038C65);
+  color: white;
+}
+
+.contacto-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.contacto-hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Información de Contacto */
+.contacto-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+}
+
+.info-item {
+  max-width: 300px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  color: #28a58f;
+  margin-bottom: 10px;
+}
+
+/* Formulario de Contacto */
+.contacto-form {
+  padding: 50px;
+  background: white;
+  text-align: center;
+}
+
+.contacto-form h2 {
+  font-size: 2rem;
+  color: #038C65;
+}
+
+.contacto-form form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contacto-form button {
+  background: #28a58f;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.contacto-form button:hover {
+  background: #038C65;
+  transform: scale(1.05);
+}
