@@ -1,7 +1,5 @@
 import './index.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import firebaseApp from "./firebase";
@@ -17,8 +15,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/membership" element={<Membership/>} />
-      
-
         <Route path="/Conductor" element={<Conductor/>} />
         <Route path="/Viajero" element={<Viajero/>} />
         <Route path="/Contact" element={<Contact />} />

@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "practica-iot-63dfc",
+    "default": "viajeseguroweb",
     "ViajeSeguroWeb": "viajeseguroweb",
     "paginaweb": "viajeseguroweb"
   },
