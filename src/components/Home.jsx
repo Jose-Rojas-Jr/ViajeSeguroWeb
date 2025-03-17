@@ -22,7 +22,35 @@ const Home = () => {
           <img src="https://i.ibb.co/xtN8mjLv/logo.png" alt="Viaje Seguro" />
         </div>
       </section>
-      
+
+      {/* Nueva Sección: Quiénes Somos */}
+      <section className="about-us">
+        <h2>Quiénes Somos</h2>
+        <p>Somos una plataforma de movilidad segura diseñada para brindar confianza y protección en cada viaje.</p>
+
+        <div className="about-columns">
+          <div className="about-box">
+            <h3> Nuestra Misión</h3>
+            <p>Ofrecer un servicio de transporte seguro, accesible y confiable para todos, priorizando la protección de nuestros pasajeros y conductores.</p>
+          </div>
+
+          <div className="about-box">
+            <h3> Nuestra Visión</h3>
+            <p>Ser la plataforma de transporte más confiable en La Paz y expandirnos a toda Bolivia con un enfoque en seguridad y tecnología innovadora.</p>
+          </div>
+
+          <div className="about-box">
+            <h3> Nuestros Valores</h3>
+            <ul>
+              <li>Seguridad y Confianza</li>
+              <li>Transparencia y Honestidad</li>
+              <li>Innovación Tecnológica</li>
+              <li>Compromiso con la Comunidad</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Sección ¿Cómo funciona? */}
       <section className="how-it-works">
         <h2>¿Cómo funciona?</h2>
@@ -44,7 +72,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Sección Seguridad */}
       <section className="security-section">
         <h2>Tu seguridad es nuestra prioridad</h2>
@@ -66,7 +94,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Sección Planes de Membresía */}
       <section className="membership-section">
         <h2>Planes de Membresía</h2>
@@ -83,7 +111,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Sección Descarga la App */}
       <section className="cta">
         <h2>Descarga ViajeSeguro hoy mismo</h2>
@@ -92,7 +120,7 @@ const Home = () => {
           <button>Descargar Ahora</button>
         </a>
       </section>
-      
+
       <Footer />
     </div>
   );
