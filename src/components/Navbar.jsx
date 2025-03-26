@@ -24,6 +24,12 @@ const Navbar = () => {
           <li><Link to="/Conductor" onClick={() => setMenuOpen(false)}>Conductor</Link></li>
           <li><Link to="/viajero" onClick={() => setMenuOpen(false)}>Viajero</Link></li>
           <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contacto</Link></li>
+          <li>
+  <a href="https://viajeseguro-b204d.web.app/" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
+    Administracion
+  </a>
+</li>
+
         </ul>
       </div>
     </nav>

@@ -97,9 +97,11 @@ const Conductor = () => {
       
       <section className="call-to-action">
         <h2>¿Listo para conducir?</h2>
+        <a href="https://play.google.com" className="download-button">
         <button className="register-button">Descarga la app y comienza</button>
+        </a>
       </section>
-      
+
       <Footer />
     </div>
   );

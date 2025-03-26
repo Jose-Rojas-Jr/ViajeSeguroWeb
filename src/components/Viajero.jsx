@@ -11,10 +11,10 @@ const Viajero = () => {
       <section className="intro">
         <h1>Tu viaje, más seguro que nunca</h1>
         <p>Viaja con tranquilidad con conductores verificados y un servicio confiable.</p>
-        <button className="register-button">Descarga la app y comienza</button>
         <img src="https://www.shutterstock.com/image-photo/happy-taxi-driver-holding-wheel-600nw-2513253267.jpg" alt="Viajero disfrutando" className="intro-image" />
       </section>
-      
+
+
       <section className="benefits">
         <h2>¿Por qué viajar con Viaje Seguro?</h2>
         <div className="benefit-item">
@@ -57,7 +57,9 @@ const Viajero = () => {
       
       <section className="call-to-action">
         <h2>Empieza a viajar con seguridad</h2>
-        <button className="register-button">Descarga la app ahora</button>
+        <a href="https://play.google.com" className="download-button">
+            <button>Descargar la Aplicacion Ahora</button>
+          </a>
       </section>
       
       <Footer />

@@ -14,7 +14,7 @@ const Home = () => {
         <div className="hero-content">
           <h1>Tu viaje, más seguro que nunca</h1>
           <p>ViajeSeguro te conecta con conductores verificados para que llegues a tu destino con tranquilidad.</p>
-          <a href="https://play.google.com/store/apps/details?id=com.viajeseguro" className="download-button">
+          <a href="https://play.google.com" className="download-button">
             <button>Descargar en Play Store</button>
           </a>
         </div>
@@ -41,12 +41,9 @@ const Home = () => {
 
           <div className="about-box">
             <h3> Nuestros Valores</h3>
-            <ul>
-              <li>Seguridad y Confianza</li>
-              <li>Transparencia y Honestidad</li>
-              <li>Innovación Tecnológica</li>
-              <li>Compromiso con la Comunidad</li>
-            </ul>
+            
+              <p>Seguridad y Confianza Transparencia y Honestidad Innovación Tecnológica Compromiso con la Comunidad</p>
+              
           </div>
         </div>
       </section>
@@ -116,9 +113,9 @@ const Home = () => {
       <section className="cta">
         <h2>Descarga ViajeSeguro hoy mismo</h2>
         <p>Empieza a viajar con total confianza y seguridad.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.viajeseguro">
-          <button>Descargar Ahora</button>
-        </a>
+        <a href="https://play.google.com" className="download-button">
+            <button>Descargar Ahora</button>
+          </a>
       </section>
 
       <Footer />

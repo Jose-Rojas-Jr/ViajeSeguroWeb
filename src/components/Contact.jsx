@@ -40,6 +40,8 @@ const Contact = () => {
           <textarea placeholder="Tu mensaje" rows="5" required></textarea>
           <button type="submit">Enviar Mensaje</button>
         </form>
+
+        
       </section>
       
       <Footer />
