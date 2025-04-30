@@ -32,18 +32,7 @@ const Contact = () => {
         </div>
       </section>
       
-      <section className="contacto-form">
-        <h2>Envíanos un mensaje</h2>
-        <form>
-          <input type="text" placeholder="Nombre" required />
-          <input type="email" placeholder="Correo Electrónico" required />
-          <textarea placeholder="Tu mensaje" rows="5" required></textarea>
-          <button type="submit">Enviar Mensaje</button>
-        </form>
-
-        
-      </section>
-      
+     
       <Footer />
     </div>
   );

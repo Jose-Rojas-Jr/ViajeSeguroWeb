@@ -1,15 +1,16 @@
-/* Navbar.css */
 
-/* Variables de colores */
+/* VARIABLES INDEPENDIENTES */
 :root {
   --primary-color: #28a58f;
   --secondary-color: #313940;
   --highlight-color: #FFD700;
   --background-light: #f5f5f5;
   --accent-color: #038C65;
+  --text-light: #ffffff;
+  --transition-ease: all 0.3s ease-in-out;
 }
 
-/* Barra de navegación */
+/* NAVBAR */
 .navbar {
   background-color: var(--secondary-color);
   padding: 15px 20px;
@@ -17,11 +18,10 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-ease);
+  z-index: 100;
 }
 
-/* Contenedor del navbar */
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -29,88 +29,83 @@
   width: 100%;
 }
 
-/* Contenedor del logo */
+/* LOGO */
 .logo-container {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-/* Imagen del logo */
 .logo-image {
-  height: 65px;
+  height: 55px;
   width: auto;
   margin-right: 10px;
 }
 
-/* Texto del logo */
 .logo {
   color: var(--primary-color);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
-/* Lista de links */
+/* MENÚ */
 .nav-menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilos de los links */
 .nav-menu a {
-  color: var(--background-light);
-  font-weight: bold;
+  color: #ffffff;
+  font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 1.1rem;
+  transition: var(--transition-ease);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* Efecto hover en los links */
+
 .nav-menu a:hover {
   color: var(--highlight-color);
-  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
-/* Efecto cuando el enlace está activo */
 .nav-menu a:active {
-  color: var(--highlight-color);
-  transform: scale(0.98);
+  transform: scale(0.97);
+  color: var(--accent-color);
 }
 
-/* Icono del menú hamburguesa */
+/* RESPONSIVO: HAMBURGUESA */
 .menu-icon {
   display: none;
-  color: var(--background-light);
+  font-size: 1.6rem;
+  color: var(--text-light);
   cursor: pointer;
 }
 
-/* Responsividad */
+/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
 @media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
   .nav-menu {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: var(--secondary-color);
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 20px 0;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    visibility: hidden;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 0 12px;
   }
 
   .nav-menu.active {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
   }
 }
