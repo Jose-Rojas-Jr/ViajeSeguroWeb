@@ -1,11 +1,34 @@
-/* index.css */
-/* Estilos globales */
+/* index.css unificado */
+
+/* Variables CSS globales */
+:root {
+  --primary-color: #50E3C2;      /* Verde turquesa (antes #2FE2C1) */
+  --primary-hover: #4A90E2;      /* Azul para hover */
+  --secondary-color: #1a1a1a;    /* Negro para navbar y footer (unificado) */
+  --background-color: #e7e4e4;   /* Fondo claro (unificado) */
+  --text-color: #313940;         /* Color texto principal */
+  --text-light: #B0B0B0;         /* Color texto secundario */
+  --dark-green: #038C65;         /* Verde oscuro para acentos */
+  --medium-green: #1FBF92;       /* Verde medio para acentos */
+  --font-family: 'Arial', sans-serif;
+}
+
+/* Estilos Globales */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #e7e4e4;
-  color: white;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
+}
+
+#root {
+  max-width: 1510px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -14,108 +37,134 @@ h1, h2, h3 {
 }
 
 a {
-  color: #50E3C2;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: #4A90E2;
+  color: var(--primary-hover);
 }
 
 /* Navbar */
 .navbar {
-  background-color: #1a1a1a;
-  padding: 15px;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 15px 20px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between; /* Mantenemos el espaciado de los elementos */
+  align-items: center;
 }
 
 .navbar a {
   color: white;
-  font-size: 18px;
+  text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
+  font-size: 18px;
   padding: 10px;
 }
 
 .navbar a:hover {
-  color: #50E3C2;
-}
-
-/* Home */
-
-
-.home h1 {
-  font-size: 2.8rem;
-  color: #50E3C2;
-}
-
-.home p {
-  font-size: 1.2rem;
-  color: #B0B0B0;
+  color: var(--primary-color);
 }
 
 /* Footer */
 .footer {
-  background-color: #1a1a1a;
-  color: #B0B0B0;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  text-align: center;
   padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
   font-size: 14px;
 }
 
 .footer a {
-  color: #50E3C2;
+  color: var(--primary-color);
 }
 
 .footer a:hover {
-  color: #4A90E2;
+  color: var(--primary-hover);
 }
 
-/* Contacto */
+/* Home */
+.home {
+  text-align: center;
+  padding: 50px;
+}
+
+.home h1 {
+  color: var(--primary-color);
+  font-size: 2.8rem;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+/* Contact */
+.contact {
+  padding: 50px;
+  text-align: center;
+}
+
 .contact-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 40px;
-  background-color: #1a1a1a;
+  background-color: var(--secondary-color);
   border-radius: 10px;
+  color: white;
 }
 
 .contact-container h2 {
-  color: #50E3C2;
+  color: var(--primary-color);
 }
 
 .contact-container p {
-  color: #B0B0B0;
-}
-html {
-  scroll-behavior: smooth;
+  color: var(--text-light);
 }
 
-
-/* Para pantallas grandes (laptop o PC) 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+/* Container común */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Para tabletas 
+/* Adaptabilidad - Media Queries unificadas */
 @media (max-width: 1023px) {
   .container {
     padding: 15px;
   }
+  
+  .navbar {
+    padding: 10px 15px;
+  }
 }
 
-/* Para móviles 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .navbar a {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .home, .contact {
+    padding: 30px;
+  }
+  
   .container {
     padding: 10px;
   }
-
+  
   h1 {
     font-size: 2em;
   }
 }
-*/

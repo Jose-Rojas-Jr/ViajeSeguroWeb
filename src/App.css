@@ -1,4 +1,4 @@
-#root {
+/*#root {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
@@ -22,7 +22,7 @@ body {
   color: var(--text-color);
 }
 
-/* Navbar */
+/* Navbar 
 .navbar {
   background-color: var(--secondary-color);
   color: white;
@@ -39,7 +39,7 @@ body {
   font-weight: bold;
 }
 
-/* Footer */
+/* Footer 
 .footer {
   background-color: var(--secondary-color);
   color: white;
@@ -50,7 +50,7 @@ body {
   width: 100%;
 }
 
-/* Home */
+/* Home 
 .home {
   text-align: center;
   padding: 50px;
@@ -60,7 +60,7 @@ body {
   color: var(--primary-color);
 }
 
-/* Contact */
+/* Contact 
 .contact {
   padding: 50px;
   background-color: var(--dark-green);
@@ -68,7 +68,7 @@ body {
   text-align: center;
 }
 
-/* Adaptabilidad */
+/* Adaptabilidad 
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -84,3 +84,4 @@ body {
     padding: 30px;
   }
 }
+*/
