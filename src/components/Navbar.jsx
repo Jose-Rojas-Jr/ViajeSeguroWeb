@@ -108,15 +108,7 @@ const Navbar = () => {
                 Servicios
               </Link>
             </li>
-            <li>
-              <Link 
-                to="/proyecto" 
-                className={isActive('/proyecto') ? 'active' : ''} 
-                onClick={() => setMenuOpen(false)}
-              >
-                Proyecto
-              </Link>
-            </li>
+          
             <li>
               <Link 
                 to="/contact" 
