@@ -1,211 +1,702 @@
 import React from 'react';
-import './Footer.css';
 import { 
   FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, 
-  FaPhone, FaEnvelope, FaMapMarkerAlt, FaApple, 
-  FaGooglePlay, FaWhatsapp, FaShieldAlt, FaCreditCard,
-  FaUsers, FaRoute, FaClock, FaHeart
+  FaPhone, FaEnvelope, FaMapMarkerAlt, FaGithub, 
+  FaWhatsapp, FaShieldAlt, FaLightbulb,
+  FaUsers, FaRoute, FaClock, FaHeart, FaLeaf,
+  FaChartBar, FaWifi, FaSun, FaMoon
 } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        {/* Columna de información de la empresa */}
-        <div className="footer-column brand-column">
-          <div className="footer-brand">
-            <h3>ViajeSeguro</h3>
-            <p>Tu plataforma de transporte más segura y confiable en Bolivia.</p>
+    <footer style={{
+      backgroundColor: 'var(--primary-dark)',
+      color: 'var(--neutral-light)',
+      padding: '4rem 0 2rem',
+      fontFamily: 'system-ui, -apple-system, sans-serif'
+    }}>
+      <div style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 2rem',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gap: '3rem'
+      }}>
+        {/* Columna de información del proyecto */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div>
+            <h3 style={{
+              color: 'var(--primary-light)',
+              fontSize: '1.5rem',
+              fontWeight: '700',
+              marginBottom: '0.5rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem'
+            }}>
+              <FaLightbulb /> SmartLight
+            </h3>
+            <p style={{
+              color: 'var(--neutral-light)',
+              opacity: '0.9',
+              lineHeight: '1.6'
+            }}>
+              Sistema inteligente para la gestión automatizada del alumbrado público en El Alto, Distrito 2 - Villa Adela.
+            </p>
           </div>
           
-          <div className="footer-stats">
-            <div className="stat">
-              <FaUsers className="stat-icon" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              padding: '0.75rem',
+              backgroundColor: 'var(--secondary-blue)',
+              borderRadius: '8px',
+              border: '1px solid rgba(251, 191, 36, 0.2)'
+            }}>
+              <FaLeaf style={{ color: 'var(--secondary-green)', fontSize: '1.2rem' }} />
               <div>
-                <span className="stat-number">15,000+</span>
-                <span className="stat-label">Viajes realizados</span>
+                <span style={{
+                  color: 'var(--primary-light)',
+                  fontSize: '1.1rem',
+                  fontWeight: '600'
+                }}>35%</span>
+                <span style={{
+                  color: 'var(--neutral-light)',
+                  fontSize: '0.9rem',
+                  marginLeft: '0.5rem'
+                }}>Ahorro energético</span>
               </div>
             </div>
-            <div className="stat">
-              <FaShieldAlt className="stat-icon" />
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              padding: '0.75rem',
+              backgroundColor: 'var(--secondary-blue)',
+              borderRadius: '8px',
+              border: '1px solid rgba(251, 191, 36, 0.2)'
+            }}>
+              <FaWifi style={{ color: 'var(--secondary-green)', fontSize: '1.2rem' }} />
               <div>
-                <span className="stat-number">100%</span>
-                <span className="stat-label">Conductores verificados</span>
+                <span style={{
+                  color: 'var(--primary-light)',
+                  fontSize: '1.1rem',
+                  fontWeight: '600'
+                }}>100%</span>
+                <span style={{
+                  color: 'var(--neutral-light)',
+                  fontSize: '0.9rem',
+                  marginLeft: '0.5rem'
+                }}>Conectividad IoT</span>
               </div>
             </div>
           </div>
           
-          <div className="social-links">
+          <div style={{ display: 'flex', gap: '1rem' }}>
             <a 
-              href="https://facebook.com/viajeseguro" 
+              href="https://facebook.com/alumbradointeligente" 
               target="_blank" 
               rel="noopener noreferrer"
-              aria-label="Facebook"
+              style={{
+                color: 'var(--neutral-light)',
+                backgroundColor: 'var(--secondary-blue)',
+                padding: '0.75rem',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textDecoration: 'none',
+                transition: 'var(--transition-ease)',
+                border: '1px solid rgba(251, 191, 36, 0.2)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.backgroundColor = 'var(--primary-light)';
+                e.target.style.color = 'var(--primary-dark)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.backgroundColor = 'var(--secondary-blue)';
+                e.target.style.color = 'var(--neutral-light)';
+              }}
             >
               <FaFacebookF />
             </a>
             <a 
-              href="https://twitter.com/viajeseguro" 
+              href="https://twitter.com/alumbradointeligente" 
               target="_blank" 
               rel="noopener noreferrer"
-              aria-label="Twitter"
+              style={{
+                color: 'var(--neutral-light)',
+                backgroundColor: 'var(--secondary-blue)',
+                padding: '0.75rem',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textDecoration: 'none',
+                transition: 'var(--transition-ease)',
+                border: '1px solid rgba(251, 191, 36, 0.2)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.backgroundColor = 'var(--primary-light)';
+                e.target.style.color = 'var(--primary-dark)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.backgroundColor = 'var(--secondary-blue)';
+                e.target.style.color = 'var(--neutral-light)';
+              }}
             >
               <FaTwitter />
             </a>
             <a 
-              href="https://instagram.com/viajeseguro" 
+              href="https://github.com/alumbrado-inteligente" 
               target="_blank" 
               rel="noopener noreferrer"
-              aria-label="Instagram"
+              style={{
+                color: 'var(--neutral-light)',
+                backgroundColor: 'var(--secondary-blue)',
+                padding: '0.75rem',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textDecoration: 'none',
+                transition: 'var(--transition-ease)',
+                border: '1px solid rgba(251, 191, 36, 0.2)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.backgroundColor = 'var(--primary-light)';
+                e.target.style.color = 'var(--primary-dark)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.backgroundColor = 'var(--secondary-blue)';
+                e.target.style.color = 'var(--neutral-light)';
+              }}
             >
-              <FaInstagram />
+              <FaGithub />
             </a>
             <a 
-              href="https://linkedin.com/company/viajeseguro" 
+              href="https://linkedin.com/company/alumbrado-inteligente" 
               target="_blank" 
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
+              style={{
+                color: 'var(--neutral-light)',
+                backgroundColor: 'var(--secondary-blue)',
+                padding: '0.75rem',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textDecoration: 'none',
+                transition: 'var(--transition-ease)',
+                border: '1px solid rgba(251, 191, 36, 0.2)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.backgroundColor = 'var(--primary-light)';
+                e.target.style.color = 'var(--primary-dark)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.backgroundColor = 'var(--secondary-blue)';
+                e.target.style.color = 'var(--neutral-light)';
+              }}
             >
               <FaLinkedinIn />
             </a>
           </div>
         </div>
 
-        {/* Columna de servicios */}
-        <div className="footer-column">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="/servicios">Viajes en la ciudad</a></li>
-            <li><a href="/servicios">Viajes largos</a></li>
-            <li><a href="/servicios">Servicios corporativos</a></li>
-            <li><a href="/conductor">Únete como conductor</a></li>
-            <li><a href="/membership">Membership Premium</a></li>
+        {/* Columna de funcionalidades */}
+        <div>
+          <h4 style={{
+            color: 'var(--primary-light)',
+            fontSize: '1.1rem',
+            fontWeight: '600',
+            marginBottom: '1rem'
+          }}>Funcionalidades</h4>
+          <ul style={{
+            listStyle: 'none',
+            padding: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.5rem'
+          }}>
+            <li>
+              <a href="/dashboard" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >
+                <FaChartBar size={14} /> Dashboard en tiempo real
+              </a>
+            </li>
+            <li>
+              <a href="/control" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >
+                <FaLightbulb size={14} /> Control remoto de luminarias
+              </a>
+            </li>
+            <li>
+              <a href="/sensors" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >
+                <FaSun size={14} /> Sensores de luminosidad
+              </a>
+            </li>
+            <li>
+              <a href="/automation" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >
+                <FaClock size={14} /> Automatización inteligente
+              </a>
+            </li>
+            <li>
+              <a href="/reports" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >
+                <FaRoute size={14} /> Reportes de consumo
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Columna de soporte */}
-        <div className="footer-column">
-          <h4>Soporte</h4>
-          <ul>
-            <li><a href="/contact">Centro de ayuda</a></li>
-            <li><a href="/contact">Contacto</a></li>
-            <li><a href="/safety">Seguridad</a></li>
-            <li><a href="/faq">Preguntas frecuentes</a></li>
-            <li><a href="/emergency">Emergencias</a></li>
-            <li><a href="/insurance">Seguros</a></li>
+        <div>
+          <h4 style={{
+            color: 'var(--primary-light)',
+            fontSize: '1.1rem',
+            fontWeight: '600',
+            marginBottom: '1rem'
+          }}>Soporte</h4>
+          <ul style={{
+            listStyle: 'none',
+            padding: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '0.5rem'
+          }}>
+            <li>
+              <a href="/help" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >Centro de ayuda</a>
+            </li>
+            <li>
+              <a href="/contact" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >Contacto</a>
+            </li>
+            <li>
+              <a href="/maintenance" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >Mantenimiento</a>
+            </li>
+            <li>
+              <a href="/faq" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >Preguntas frecuentes</a>
+            </li>
+            <li>
+              <a href="/emergency" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >Emergencias</a>
+            </li>
+            <li>
+              <a href="/documentation" style={{
+                color: 'var(--neutral-light)',
+                textDecoration: 'none',
+                opacity: '0.9',
+                transition: 'var(--transition-ease)'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.color = 'var(--primary-light)';
+                e.target.style.opacity = '1';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = 'var(--neutral-light)';
+                e.target.style.opacity = '0.9';
+              }}
+              >Documentación técnica</a>
+            </li>
           </ul>
         </div>
 
-        {/* Columna de información legal */}
-        <div className="footer-column">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="/privacy">Política de privacidad</a></li>
-            <li><a href="/terms">Términos y condiciones</a></li>
-            <li><a href="/cookies">Política de cookies</a></li>
-            <li><a href="/accessibility">Accesibilidad</a></li>
-            <li><a href="/licenses">Licencias</a></li>
-            <li><a href="/complaints">Libro de reclamaciones</a></li>
-          </ul>
-        </div>
-
-        {/* Columna de contacto y descarga */}
-        <div className="footer-column contact-column">
-          <h4>Contacto</h4>
-          <div className="contact-info">
-            <div className="contact-item">
-              <FaPhone className="contact-icon" />
+        {/* Columna de contacto */}
+        <div>
+          <h4 style={{
+            color: 'var(--primary-light)',
+            fontSize: '1.1rem',
+            fontWeight: '600',
+            marginBottom: '1rem'
+          }}>Contacto</h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '0.75rem'
+            }}>
+              <FaPhone style={{ 
+                color: 'var(--secondary-green)', 
+                marginTop: '0.2rem',
+                fontSize: '1rem'
+              }} />
               <div>
-                <a href="tel:+59178795918">+591 78795918</a>
-                <span className="contact-detail">24/7 Soporte</span>
+                <a href="tel:+59178795918" style={{
+                  color: 'var(--neutral-light)',
+                  textDecoration: 'none',
+                  fontWeight: '500'
+                }}>+591 78795918</a>
+                <div style={{
+                  color: 'var(--neutral-light)',
+                  fontSize: '0.85rem',
+                  opacity: '0.7'
+                }}>Soporte técnico 24/7</div>
               </div>
             </div>
             
-            <div className="contact-item">
-              <FaEnvelope className="contact-icon" />
+            <div style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '0.75rem'
+            }}>
+              <FaEnvelope style={{ 
+                color: 'var(--secondary-green)', 
+                marginTop: '0.2rem',
+                fontSize: '1rem'
+              }} />
               <div>
-                <a href="mailto:soporte@viajeseguro.com">soporte@viajeseguro.com</a>
-                <span className="contact-detail">Respuesta  24h</span>
+                <a href="mailto:soporte@alumbradointeligente.com" style={{
+                  color: 'var(--neutral-light)',
+                  textDecoration: 'none',
+                  fontWeight: '500'
+                }}>soporte@alumbradointeligente.com</a>
+                <div style={{
+                  color: 'var(--neutral-light)',
+                  fontSize: '0.85rem',
+                  opacity: '0.7'
+                }}>Respuesta en 24h</div>
               </div>
             </div>
             
-            <div className="contact-item">
-              <FaMapMarkerAlt className="contact-icon" />
+            <div style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '0.75rem'
+            }}>
+              <FaMapMarkerAlt style={{ 
+                color: 'var(--secondary-green)', 
+                marginTop: '0.2rem',
+                fontSize: '1rem'
+              }} />
               <div>
-                <span>La Paz, Bolivia</span>
-                <span className="contact-detail">Av. Montes, Plaza Pérez Velasco</span>
+                <span style={{
+                  color: 'var(--neutral-light)',
+                  fontWeight: '500'
+                }}>El Alto, Bolivia</span>
+                <div style={{
+                  color: 'var(--neutral-light)',
+                  fontSize: '0.85rem',
+                  opacity: '0.7'
+                }}>Distrito 2, Villa Adela</div>
               </div>
             </div>
             
-            <div className="contact-item">
-              <FaWhatsapp className="contact-icon whatsapp" />
+            <div style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '0.75rem'
+            }}>
+              <FaWhatsapp style={{ 
+                color: 'var(--secondary-green)', 
+                marginTop: '0.2rem',
+                fontSize: '1rem'
+              }} />
               <div>
                 <a 
                   href="https://wa.me/59178795918" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  style={{
+                    color: 'var(--neutral-light)',
+                    textDecoration: 'none',
+                    fontWeight: '500'
+                  }}
                 >
                   WhatsApp
                 </a>
-                <span className="contact-detail">Chat directo</span>
+                <div style={{
+                  color: 'var(--neutral-light)',
+                  fontSize: '0.85rem',
+                  opacity: '0.7'
+                }}>Chat directo</div>
               </div>
             </div>
           </div>
-
-          <div className="download-section">
-            <h5>Descarga la App</h5>
-            <div className="download-buttons">
-              <a 
-                href="https://apps.apple.com/app/viajeseguro" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="download-button"
-              >
-                <FaApple className="download-icon" />
-                <div className="download-text">
-                  <span className="download-small">Descargar en</span>
-                  <span className="download-large">App Store</span>
-                </div>
-              </a>
-              
-              <a 
-                href="https://play.google.com/store/apps/details?id=com.viajeseguro" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="download-button"
-              >
-                <FaGooglePlay className="download-icon" />
-                <div className="download-text">
-                  <span className="download-small">Consíguelo en</span>
-                  <span className="download-large">Google Play</span>
-                </div>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
 
-
       {/* Footer bottom */}
-      <div className="footer-bottom">
-        <div className="footer-bottom-content">
-          <div className="copyright">
-            <p>© {currentYear} ViajeSeguro. Todos los derechos reservados.</p>
-            <p className="made-with">
-              Hecho con <FaHeart className="heart-icon" /> en Bolivia
+      <div style={{
+        marginTop: '3rem',
+        paddingTop: '2rem',
+        borderTop: '1px solid rgba(251, 191, 36, 0.2)'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 2rem',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '1rem'
+        }}>
+          <div>
+            <p style={{
+              color: 'var(--neutral-light)',
+              margin: 0,
+              opacity: '0.8'
+            }}>© {currentYear} LuzInteligente. Todos los derechos reservados.</p>
+            <p style={{
+              color: 'var(--neutral-light)',
+              margin: '0.25rem 0 0',
+              opacity: '0.7',
+              fontSize: '0.9rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem'
+            }}>
+              Desarrollado con <FaHeart style={{ color: 'var(--secondary-green)' }} /> por estudiantes de Ingeniería de Sistemas
             </p>
           </div>
           
-          <div className="footer-links">
-            <a href="/sitemap">Mapa del sitio</a>
-            <a href="/careers">Trabajar con nosotros</a>
-            <a href="/press">Prensa</a>
-            <a href="/investors">Inversionistas</a>
+          <div style={{
+            display: 'flex',
+            gap: '1.5rem',
+            flexWrap: 'wrap'
+          }}>
+            <a href="/privacy" style={{
+              color: 'var(--neutral-light)',
+              textDecoration: 'none',
+              opacity: '0.8',
+              fontSize: '0.9rem',
+              transition: 'var(--transition-ease)'
+            }}
+            onMouseOver={(e) => {
+              e.target.style.color = 'var(--primary-light)';
+              e.target.style.opacity = '1';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.color = 'var(--neutral-light)';
+              e.target.style.opacity = '0.8';
+            }}
+            >Privacidad</a>
+            <a href="/terms" style={{
+              color: 'var(--neutral-light)',
+              textDecoration: 'none',
+              opacity: '0.8',
+              fontSize: '0.9rem',
+              transition: 'var(--transition-ease)'
+            }}
+            onMouseOver={(e) => {
+              e.target.style.color = 'var(--primary-light)';
+              e.target.style.opacity = '1';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.color = 'var(--neutral-light)';
+              e.target.style.opacity = '0.8';
+            }}
+            >Términos</a>
+            <a href="/api-docs" style={{
+              color: 'var(--neutral-light)',
+              textDecoration: 'none',
+              opacity: '0.8',
+              fontSize: '0.9rem',
+              transition: 'var(--transition-ease)'
+            }}
+            onMouseOver={(e) => {
+              e.target.style.color = 'var(--primary-light)';
+              e.target.style.opacity = '1';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.color = 'var(--neutral-light)';
+              e.target.style.opacity = '0.8';
+            }}
+            >API</a>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        :root {
+          --primary-dark: #0f172a;
+          --primary-light: #fbbf24;
+          --secondary-blue: #1e293b;
+          --secondary-green: #10b981;
+          --neutral-light: #f8fafc;
+          --neutral-dark: #64748b;
+          --text-main: var(--primary-dark);
+          --text-light: var(--neutral-dark);
+          --border-color: rgba(15, 23, 42, 0.1);
+          --transition-ease: all 0.3s ease-in-out;
+          --shadow-soft: 0 4px 15px rgba(15, 23, 42, 0.1);
+          --shadow-medium: 0 8px 25px rgba(15, 23, 42, 0.15);
+          --shadow-strong: 0 15px 35px rgba(15, 23, 42, 0.2);
+        }
+
+        @media (max-width: 768px) {
+          footer {
+            padding: 2rem 0 1rem !important;
+          }
+          
+          footer > div:first-child {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+          
+          footer > div:last-child > div {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            text-align: left !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 };

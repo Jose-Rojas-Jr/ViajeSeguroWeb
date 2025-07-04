@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaLightbulb } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -64,15 +64,20 @@ const Navbar = () => {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container">
           <Link to="/" className="logo-container" onClick={() => setMenuOpen(false)}>
-            <img src={"https://i.ibb.co/xtN8mjLv/logo.png"} alt="Viaje Seguro" className="logo-image" />
-            <h1 className="logo">ViajeSeguro</h1>
+            <div className="logo-icon">
+              <FaLightbulb />
+            </div>
+            <div className="logo-text">
+              <h1 className="logo-title">SmartLight</h1>
+              <span className="logo-subtitle"></span>
+            </div>
           </Link>
           
           <div className="menu-icon" onClick={(e) => {
             e.stopPropagation();
             setMenuOpen(!menuOpen);
           }}>
-            {menuOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
+            {menuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
           </div>
           
           <ul className={menuOpen ? "nav-menu active" : "nav-menu"}>
@@ -87,6 +92,15 @@ const Navbar = () => {
             </li>
             <li>
               <Link 
+                to="/nosotros" 
+                className={isActive('/nosotros') ? 'active' : ''} 
+                onClick={() => setMenuOpen(false)}
+              >
+                Nosotros
+              </Link>
+            </li>
+            <li>
+              <Link 
                 to="/services" 
                 className={isActive('/services') ? 'active' : ''} 
                 onClick={() => setMenuOpen(false)}
@@ -96,29 +110,11 @@ const Navbar = () => {
             </li>
             <li>
               <Link 
-                to="/membership" 
-                className={isActive('/membership') ? 'active' : ''} 
+                to="/proyecto" 
+                className={isActive('/proyecto') ? 'active' : ''} 
                 onClick={() => setMenuOpen(false)}
               >
-                Membresía
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/Conductor" 
-                className={isActive('/Conductor') ? 'active' : ''} 
-                onClick={() => setMenuOpen(false)}
-              >
-                Conductor
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/viajero" 
-                className={isActive('/viajero') ? 'active' : ''} 
-                onClick={() => setMenuOpen(false)}
-              >
-                Viajero
+                Proyecto
               </Link>
             </li>
             <li>
@@ -132,13 +128,11 @@ const Navbar = () => {
             </li>
             <li>
               <a 
-                href="https://viajeseguro-b204d.web.app/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="admin-link"
+                href="/dashboard" 
+                className="dashboard-link"
                 onClick={() => setMenuOpen(false)}
               >
-                Administración
+                Dashboard
               </a>
             </li>
           </ul>

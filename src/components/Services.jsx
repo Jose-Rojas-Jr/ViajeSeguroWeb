@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './Services.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import {
-  FaCar, FaShieldAlt, FaUserShield, FaSchool, FaUsers, 
-  FaBuilding, FaRoute, FaHandshake, FaClock, FaMapMarkedAlt, 
+  FaLightbulb, FaWifi, FaChartLine, FaCog, FaShieldAlt, 
+  FaServer, FaRoute, FaHandshake, FaClock, FaMapMarkedAlt, 
   FaMobileAlt, FaMoneyBillWave, FaLock, FaHeadset,
-  FaStar, FaSmile, FaCalendarCheck, FaCheck
+  FaStar, FaSmile, FaCalendarCheck, FaCheck, FaLeaf,
+  FaEye, FaBolt, FaCloud, FaTools, FaUsers
 } from 'react-icons/fa';
 
 const Services = () => {
@@ -66,7 +66,7 @@ const Services = () => {
       <section className="services-hero">
         <div className="services-hero-content">
           <h1>Nuestros Servicios</h1>
-          <p>Soluciones de movilidad urbana con enfoque en seguridad, accesibilidad y responsabilidad social para todos los ciudadanos bolivianos.</p>
+          <p>Soluciones tecnológicas avanzadas para la gestión inteligente del alumbrado público, optimizando el consumo energético y mejorando la calidad de vida urbana.</p>
           <a 
             href="#services-list" 
             className="services-hero-button"
@@ -82,77 +82,77 @@ const Services = () => {
 
       {/* INTRODUCCIÓN */}
       <section className="services-intro">
-        <h2>Transformando la Movilidad Urbana</h2>
+        <h2>Transformando la Iluminación Urbana</h2>
         <p>
-          En ViajeSeguro, entendemos que la movilidad es más que solo transportarse de un punto a otro. 
-          Es sobre crear experiencias seguras, confiables y accesibles para todos.
+          En LuzSmart, entendemos que el alumbrado público es más que solo iluminación. 
+          Es sobre crear ciudades inteligentes, eficientes y sostenibles para el futuro.
         </p>
         <p>
-          Nuestros servicios están diseñados pensando en las necesidades específicas de diferentes grupos 
-          de usuarios, siempre manteniendo la seguridad y la calidad como prioridades.
+          Nuestros servicios están diseñados para optimizar el consumo energético, reducir costos operativos 
+          y proporcionar un control total sobre la infraestructura de iluminación urbana.
         </p>
       </section>
 
       {/* LISTA DE SERVICIOS */}
       <section id="services-list" className="services-list">
         <div className="service">
-          <FaShieldAlt className="icon" />
-          <h3>Seguridad Garantizada</h3>
+          <FaLightbulb className="icon" />
+          <h3>Sistemas IoT Inteligentes</h3>
           <p>
-            Todos nuestros conductores pasan por una rigurosa verificación de antecedentes y reciben capacitación 
-            en protocolos de seguridad. Cada viaje está monitoreado en tiempo real para tu tranquilidad.
+            Implementación de redes de sensores distribuidos que monitorizan luminosidad, movimiento y condiciones 
+            ambientales en tiempo real. Cada luminaria se convierte en un nodo inteligente de la red urbana.
           </p>
-          <a href="/contact" className="service-action">Conoce nuestros protocolos</a>
+          <a href="/contact" className="service-action">Solicitar información</a>
         </div>
         
         <div className="service">
-          <FaUserShield className="icon" />
-          <h3>Solo Mujeres</h3>
+          <FaChartLine className="icon" />
+          <h3>Gestión Energética</h3>
           <p>
-            Servicio exclusivo con conductoras certificadas para mujeres que buscan un entorno 
-            seguro y de confianza durante sus trayectos. Disponible las 24 horas.
+            Monitoreo y análisis del consumo energético con algoritmos de optimización automática. 
+            Reducción del consumo hasta un 60% mediante control inteligente y programación adaptativa.
           </p>
-          <a href="/viajero" className="service-action">Solicitar viaje</a>
+          <a href="/proyecto" className="service-action">Ver resultados</a>
         </div>
         
         <div className="service">
-          <FaSchool className="icon" />
-          <h3>Escolar Seguro</h3>
+          <FaWifi className="icon" />
+          <h3>Conectividad Avanzada</h3>
           <p>
-            Transporte escolar rastreado y controlado para la tranquilidad de padres y tutores. 
-            Notificaciones automáticas de llegada y salida, y conductores especializados.
+            Comunicación IP robusta entre dispositivos con protocolos de red seguros. 
+            Integración con infraestructura existente y capacidad de expansión modular.
           </p>
-          <a href="/membership" className="service-action">Ver planes mensuales</a>
+          <a href="/contact" className="service-action">Conocer tecnología</a>
         </div>
         
         <div className="service">
-          <FaBuilding className="icon" />
-          <h3>Transporte Corporativo</h3>
+          <FaServer className="icon" />
+          <h3>Backend de Microservicios</h3>
           <p>
-            Soluciones empresariales para el traslado eficiente y seguro de personal. 
-            Optimiza costos y mejora la puntualidad de tus colaboradores con nuestras flotas dedicadas.
+            Arquitectura escalable que gestiona millones de eventos IoT. 
+            APIs RESTful para integración con sistemas municipales y plataformas de terceros.
           </p>
-          <a href="/contact" className="service-action">Solicitar cotización</a>
+          <a href="/contact" className="service-action">Solicitar demo</a>
         </div>
         
         <div className="service">
-          <FaRoute className="icon" />
-          <h3>Amplia Cobertura</h3>
+          <FaMapMarkedAlt className="icon" />
+          <h3>Dashboard Geoespacial</h3>
           <p>
-            Presencia en las principales zonas urbanas de La Paz, Santa Cruz y Cochabamba, 
-            con planes de expansión a más ciudades bolivianas durante 2025.
+            Interfaz web interactiva con mapas en tiempo real del estado de luminarias. 
+            Visualización georreferenciada del consumo energético y alertas por sectores.
           </p>
-          <a href="/membership" className="service-action">Ver zonas de cobertura</a>
+          <a href="/contact" className="service-action">Ver demo</a>
         </div>
         
         <div className="service">
-          <FaClock className="icon" />
-          <h3>Servicio 24/7</h3>
+          <FaTools className="icon" />
+          <h3>Mantenimiento Predictivo</h3>
           <p>
-            Disponibilidad completa a cualquier hora del día o de la noche. 
-            Nunca te quedarás sin opciones de transporte seguro, sin importar la hora.
+            Sistema de alertas automáticas para detección temprana de fallas. 
+            Programación inteligente de mantenimiento basada en datos históricos y patrones de uso.
           </p>
-          <a href="/viajero" className="service-action">Reservar ahora</a>
+          <a href="/contact" className="service-action">Conocer más</a>
         </div>
       </section>
 
@@ -161,67 +161,100 @@ const Services = () => {
         <h2>Beneficios de Nuestros Servicios</h2>
         <div className="benefits-grid">
           <div className="benefit-item">
-            <FaLock className="benefit-icon" />
-            <h3>Privacidad Garantizada</h3>
-            <p>Tus datos personales están protegidos con los más altos estándares de seguridad.</p>
-          </div>
-          
-          <div className="benefit-item">
-            <FaHeadset className="benefit-icon" />
-            <h3>Soporte 24/7</h3>
-            <p>Atención al cliente disponible todo el día, todos los días de la semana.</p>
-          </div>
-          
-          <div className="benefit-item">
-            <FaMobileAlt className="benefit-icon" />
-            <h3>App Intuitiva</h3>
-            <p>Fácil de usar para todos los niveles de usuarios, con interfaces claras y sencillas.</p>
+            <FaLeaf className="benefit-icon" />
+            <h3>Sostenibilidad Ambiental</h3>
+            <p>Reducción significativa de la huella de carbono mediante optimización energética inteligente.</p>
           </div>
           
           <div className="benefit-item">
             <FaMoneyBillWave className="benefit-icon" />
-            <h3>Precios Justos</h3>
-            <p>Tarifas transparentes y sin sorpresas. Siempre sabrás cuánto pagarás antes de confirmar.</p>
+            <h3>Ahorro Económico</h3>
+            <p>Reducción de costos operativos hasta un 60% en consumo eléctrico y gastos de mantenimiento.</p>
           </div>
           
           <div className="benefit-item">
-            <FaMapMarkedAlt className="benefit-icon" />
-            <h3>Seguimiento en Tiempo Real</h3>
-            <p>Comparte tu ubicación con familiares o amigos durante todo el trayecto.</p>
+            <FaEye className="benefit-icon" />
+            <h3>Monitoreo 24/7</h3>
+            <p>Supervisión continua del estado operativo de cada luminaria con alertas instantáneas.</p>
           </div>
           
           <div className="benefit-item">
-            <FaSmile className="benefit-icon" />
-            <h3>Experiencia de Calidad</h3>
-            <p>Conductores amables y profesionales, vehículos en excelentes condiciones.</p>
+            <FaCloud className="benefit-icon" />
+            <h3>Datos en la Nube</h3>
+            <p>Almacenamiento seguro y análisis avanzado de datos históricos para toma de decisiones.</p>
           </div>
           
           <div className="benefit-item">
-            <FaCalendarCheck className="benefit-icon" />
-            <h3>Reservas Anticipadas</h3>
-            <p>Programa tus viajes con antelación para una mejor planificación de tu tiempo.</p>
+            <FaBolt className="benefit-icon" />
+            <h3>Control Remoto</h3>
+            <p>Gestión completa desde cualquier ubicación con comandos instantáneos a luminarias.</p>
           </div>
           
           <div className="benefit-item">
-            <FaCheck className="benefit-icon" />
-            <h3>Verificación Completa</h3>
-            <p>Todos los conductores están verificados mediante múltiples métodos de validación.</p>
+            <FaShieldAlt className="benefit-icon" />
+            <h3>Seguridad Avanzada</h3>
+            <p>Protocolos de comunicación encriptados y sistema de autenticación robusto.</p>
+          </div>
+          
+          <div className="benefit-item">
+            <FaCog className="benefit-icon" />
+            <h3>Automatización Total</h3>
+            <p>Funcionamiento autónomo basado en condiciones ambientales y patrones de uso.</p>
+          </div>
+          
+          <div className="benefit-item">
+            <FaUsers className="benefit-icon" />
+            <h3>Soporte Especializado</h3>
+            <p>Equipo técnico dedicado para implementación, capacitación y soporte continuo.</p>
           </div>
         </div>
       </section>
 
-      {/* CTA FINAL */}
-      <section className="services-cta">
-        <div className="services-cta-content">
-          <h2>Comienza a viajar seguro hoy mismo</h2>
-          <p>Únete a los miles de bolivianos que confían en nosotros para sus desplazamientos diarios, seguros y confiables.</p>
-          <div className="cta-buttons">
-            <a href="https://play.google.com" className="cta-button-primary">Descargar App</a>
-            <Link to="/contact" className="cta-button-secondary">Contactar Soporte</Link>
+      {/* SERVICIOS TÉCNICOS ESPECÍFICOS */}
+      <section className="technical-services">
+        <h2>Servicios Técnicos Especializados</h2>
+        <div className="technical-grid">
+          <div className="technical-service">
+            <h3>🔧 Implementación IoT</h3>
+            <ul>
+              <li>Instalación de sensores de luminosidad y movimiento</li>
+              <li>Configuración de microcontroladores ESP32</li>
+              <li>Establecimiento de red de comunicación IP</li>
+              <li>Integración con infraestructura existente</li>
+            </ul>
+          </div>
+          
+          <div className="technical-service">
+            <h3>📊 Análisis de Datos</h3>
+            <ul>
+              <li>Estudios de consumo energético actual</li>
+              <li>Análisis de patrones de uso nocturno</li>
+              <li>Reportes de eficiencia energética</li>
+              <li>Proyecciones de ahorro a largo plazo</li>
+            </ul>
+          </div>
+          
+          <div className="technical-service">
+            <h3>💻 Desarrollo de Software</h3>
+            <ul>
+              <li>Dashboard web responsive con React</li>
+              <li>Backend robusto con Flask</li>
+              <li>APIs RESTful para integración</li>
+              <li>Sistemas de reportes automáticos</li>
+            </ul>
+          </div>
+          
+          <div className="technical-service">
+            <h3>🛠️ Mantenimiento y Soporte</h3>
+            <ul>
+              <li>Monitoreo continuo 24/7</li>
+              <li>Mantenimiento preventivo programado</li>
+              <li>Soporte técnico especializado</li>
+              <li>Actualizaciones de firmware remotas</li>
+            </ul>
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

@@ -4,9 +4,9 @@ import Home from './components/Home';
 import Contact from './components/Contact';
 import firebaseApp from "./firebase";
 import Conductor from './components/Conductor';
-import Membership from './components/Membership';
 import Services from './components/Services';
-import Viajero from './components/Viajero';
+import Nosotros from './components/Nosotros';
+import Proyecto from './components/Proyecto';
 function App() {
   return (
     <Router>
@@ -14,9 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Services" element={<Services />} />
-        <Route path="/membership" element={<Membership/>} />
+        <Route path="/Proyecto" element={<Proyecto/>} />
         <Route path="/Conductor" element={<Conductor/>} />
-        <Route path="/Viajero" element={<Viajero/>} />
+        <Route path="/Nosotros" element={<Nosotros/>} />
         <Route path="/Contact" element={<Contact />} />
         
       </Routes>

@@ -3,9 +3,11 @@ import './Home.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import {
-  FaShieldAlt, FaUserCheck, FaMapMarkedAlt, FaCar, FaClock,
-  FaMobileAlt, FaHandshake, FaQuestionCircle, FaBullseye, FaEye, 
-  FaBalanceScale, FaLock, FaStar, FaRocket, FaHeadset
+  FaLightbulb, FaBolt, FaChartLine, FaMobileAlt, FaClock,
+  FaWifi, FaShieldAlt, FaLeaf, FaBullseye, FaEye, 
+  FaBalanceScale, FaLock, FaStar, FaRocket, FaHeadset,
+  FaMapMarkedAlt, FaServer, FaMicrochip, FaCloudUploadAlt,
+  FaCheckCircle, FaExclamationTriangle, FaMoneyBillWave
 } from 'react-icons/fa';
 
 const Home = () => {
@@ -60,174 +62,207 @@ const Home = () => {
       {/* HERO */}
       <section id="home" className="hero">
         <div className="hero-content">
-          <h1>Tu viaje, más seguro que nunca</h1>
-          <p>Conecta con conductores verificados y navega con confianza gracias a nuestra plataforma digital de transporte seguro.</p>
+          <h1>Iluminación Inteligente para El Alto</h1>
+          <p>Sistema automatizado de gestión energética que optimiza el alumbrado público mediante IoT, reduciendo costos y mejorando la eficiencia urbana</p>
           <div className="hero-buttons">
-            <a href="https://play.google.com" className="btn-primary">Descargar App</a>
+            <a href="/proyecto" className="btn-primary">Ver Proyecto</a>
             <a href="#about" className="btn-secondary">Conocer más</a>
           </div>
         </div>
         <div className="hero-image">
-          <img src="https://i.ibb.co/xtN8mjLv/logo.png" alt="Viaje Seguro App" />
+          <div className="smart-light-illustration">
+            <FaLightbulb className="main-bulb" />
+            <div className="sensor-indicators">
+              <div className="sensor-dot"></div>
+              <div className="sensor-dot"></div>
+              <div className="sensor-dot"></div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ESTADÍSTICAS - NUEVA SECCIÓN */}
+      {/* ESTADÍSTICAS */}
       <section className="statistics">
         <div className="stat-container">
           <div className="stat-item">
-            <div className="stat-number">5,000+</div>
-            <div className="stat-label">Viajes Seguros</div>
+            <div className="stat-number">75%</div>
+            <div className="stat-label">Ahorro Energético</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">1,200+</div>
-            <div className="stat-label">Conductores Verificados</div>
+            <div className="stat-number">50+</div>
+            <div className="stat-label">Luminarias Monitoreadas</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">20+</div>
-            <div className="stat-label">Ciudades</div>
+            <div className="stat-number">24/7</div>
+            <div className="stat-label">Monitoreo Continuo</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">4.8</div>
-            <div className="stat-label">Valoración Promedio</div>
+            <div className="stat-number">5</div>
+            <div className="stat-label">Cuadras de Cobertura</div>
           </div>
         </div>
       </section>
 
-      {/* SOBRE NOSOTROS */}
+      {/* SOBRE EL PROYECTO */}
       <section id="about" className="about-us">
-        <h2>¿Quiénes Somos?</h2>
-        <p>ViajeSeguro es una iniciativa boliviana que busca transformar la movilidad urbana,
-        conectando pasajeros con conductores certificados para ofrecer viajes seguros, accesibles y monitoreados en tiempo real.</p>
+        <h2>Sobre el Proyecto</h2>
+        <p>SmartLight El Alto es un sistema inteligente de gestión de alumbrado público que utiliza tecnologías IoT y microservicios para automatizar el control de luminarias, optimizar el consumo energético y facilitar el monitoreo remoto en tiempo real </p>
         <div className="mision-vision">
           <div>
             <FaBullseye className="icon" />
-            <h3>Misión</h3>
-            <p>Ofrecer una solución tecnológica que promueva la seguridad y confianza en el transporte diario de los ciudadanos bolivianos.</p>
+            <h3>Objetivo</h3>
+            <p>Desarrollar un sistema inteligente que reduzca el consumo energético del alumbrado público mediante automatización basada en sensores y control remoto centralizado.</p>
           </div>
           <div>
             <FaEye className="icon" />
             <h3>Visión</h3>
-            <p>Ser la plataforma de movilidad más segura y confiable de Bolivia, presente en todas las ciudades y comunidades del país.</p>
+            <p>Convertirse en el modelo de referencia para la implementación de sistemas inteligentes de alumbrado público en ciudades de Bolivia.</p>
           </div>
         </div>
       </section>
 
-      {/* VALORES */}
+      {/* TECNOLOGÍAS */}
       <section className="valores">
-        <h2>Nuestros Valores</h2>
+        <h2>Tecnologías Implementadas</h2>
         <div className="features">
           <div className="feature">
-            <FaShieldAlt className="feature-icon" />
-            <h3>Seguridad</h3>
-            <p>En el centro de cada viaje está tu tranquilidad. Verificamos a todos nuestros conductores.</p>
+            <FaMicrochip className="feature-icon" />
+            <h3>Sensores IoT</h3>
+            <p>Sensores de luminosidad y movimiento conectados a microcontroladores con capacidad de comunicación IP.</p>
           </div>
           <div className="feature">
-            <FaBalanceScale className="feature-icon" />
-            <h3>Transparencia</h3>
-            <p>Todos los perfiles y procesos son públicos y verificables para garantizar tu confianza.</p>
-          </div>
-          <div className="feature">
-            <FaLock className="feature-icon" />
-            <h3>Privacidad</h3>
-            <p>Tus datos personales están protegidos con los más altos estándares de seguridad.</p>
+            <FaServer className="feature-icon" />
+            <h3>Microservicios</h3>
+            <p>Backend modular desarrollado en Flask para procesamiento y gestión de datos en tiempo real.</p>
           </div>
           <div className="feature">
             <FaMobileAlt className="feature-icon" />
-            <h3>Accesibilidad</h3>
-            <p>Una app intuitiva y fácil de usar para todos los niveles de usuarios.</p>
+            <h3>Dashboard Web</h3>
+            <p>Interfaz responsive desarrollada en React para visualización y control remoto de luminarias.</p>
+          </div>
+          <div className="feature">
+            <FaWifi className="feature-icon" />
+            <h3>Conectividad</h3>
+            <p>Red local robusta para transmisión de datos entre sensores y sistema central.</p>
           </div>
         </div>
       </section>
 
-      {/* BENEFICIOS CONDUCTOR / VIAJERO */}
+      {/* BENEFICIOS */}
       <section className="benefits">
-        <h2>Beneficios de ViajeSeguro</h2>
+        <h2>Beneficios del Sistema</h2>
         <div className="benefit-columns">
           <div className="benefit-card">
-            <h3>Para Conductores</h3>
+            <h3>Para la Municipalidad</h3>
             <ul>
-              <li>Registro fácil desde la app con verificación rápida</li>
-              <li>Bonos por cumplimiento y calificaciones positivas</li>
-              <li>Soporte técnico y humano disponible 24/7</li>
-              <li>Tarifas competitivas sin comisiones abusivas</li>
-              <li>Mayor seguridad con pasajeros verificados</li>
-              <li>Flexibilidad para trabajar en tus horarios</li>
+              <li>Reducción significativa en costos de energía eléctrica</li>
+              <li>Monitoreo centralizado de toda la infraestructura</li>
+              <li>Detección automática de fallas y mantenimiento</li>
+              <li>Reportes detallados de consumo por sector</li>
+              <li>Control remoto de encendido y apagado</li>
+              <li>Optimización automática basada en condiciones reales</li>
             </ul>
           </div>
           <div className="benefit-card">
-            <h3>Para Pasajeros</h3>
+            <h3>Para la Comunidad</h3>
             <ul>
-              <li>Conductores verificados con documentación al día</li>
-              <li>Seguimiento en tiempo real compartible con familiares</li>
-              <li>Botón de emergencia con respuesta inmediata</li>
-              <li>Opciones de viaje flexibles según tus necesidades</li>
-              <li>Precios transparentes sin tarifas dinámicas abusivas</li>
-              <li>Historial de viajes detallado para control personal</li>
+              <li>Iluminación eficiente y sostenible</li>
+              <li>Mejor calidad del servicio de alumbrado público</li>
+              <li>Contribución a la reducción de emisiones de CO₂</li>
+              <li>Mayor seguridad con iluminación inteligente</li>
+              <li>Respuesta rápida a problemas de iluminación</li>
+              <li>Modelo de ciudad inteligente y tecnológica</li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* ¿CÓMO FUNCIONA? */}
+      {/* CÓMO FUNCIONA */}
       <section className="how-it-works">
-        <h2>¿Cómo funciona?</h2>
+        <h2>¿Cómo Funciona el Sistema?</h2>
         <div className="steps">
           <div className="step">
+            <FaLightbulb className="step-icon" />
+            <h3>Detección Inteligente</h3>
+            <p>Los sensores de luminosidad y movimiento recopilan datos ambientales en tiempo real de cada poste.</p>
+          </div>
+          <div className="step">
+            <FaCloudUploadAlt className="step-icon" />
+            <h3>Transmisión de Datos</h3>
+            <p>La información se envía al servidor central a través de la red IP local para su procesamiento.</p>
+          </div>
+          <div className="step">
+            <FaChartLine className="step-icon" />
+            <h3>Análisis y Control</h3>
+            <p>El sistema procesa los datos y ejecuta algoritmos de optimización energética automáticamente.</p>
+          </div>
+          <div className="step">
             <FaMobileAlt className="step-icon" />
-            <h3>Descarga la App</h3>
-            <p>Disponible gratuitamente en la Play Store para todos los dispositivos Android y próximamente en iOS.</p>
-          </div>
-          <div className="step">
-            <FaUserCheck className="step-icon" />
-            <h3>Crea tu Cuenta</h3>
-            <p>Regístrate con tus datos básicos y verifica tu identidad para mayor seguridad.</p>
-          </div>
-          <div className="step">
-            <FaMapMarkedAlt className="step-icon" />
-            <h3>Solicita tu Viaje</h3>
-            <p>Escoge tu destino, horario y tipo de vehículo según tus necesidades.</p>
-          </div>
-          <div className="step">
-            <FaCar className="step-icon" />
-            <h3>Disfruta el Trayecto</h3>
-            <p>Viaja con tranquilidad con seguimiento en tiempo real y botón de emergencia.</p>
+            <h3>Monitoreo Web</h3>
+            <p>Los administradores supervisan y controlan el sistema desde el dashboard web en tiempo real.</p>
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIOS - NUEVA SECCIÓN */}
+      {/* CARACTERÍSTICAS DEL SISTEMA */}
+      <section className="app-features">
+        <h2>Características del Sistema</h2>
+        <div className="app-features-container">
+          <div className="app-feature-item">
+            <FaClock className="app-feature-icon" />
+            <h3>Monitoreo 24/7</h3>
+            <p>Supervisión continua del estado y consumo de cada luminaria en tiempo real.</p>
+          </div>
+          <div className="app-feature-item">
+            <FaBolt className="app-feature-icon" />
+            <h3>Automatización Inteligente</h3>
+            <p>Control automático basado en luminosidad ambiental y detección de presencia.</p>
+          </div>
+          <div className="app-feature-item">
+            <FaShieldAlt className="app-feature-icon" />
+            <h3>Sistema de Alertas</h3>
+            <p>Notificaciones automáticas ante fallas o anomalías en el funcionamiento.</p>
+          </div>
+          <div className="app-feature-item">
+            <FaLeaf className="app-feature-icon" />
+            <h3>Eficiencia Energética</h3>
+            <p>Optimización del consumo eléctrico mediante algoritmos de gestión inteligente.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* RESULTADOS ESPERADOS */}
       <section className="testimonials">
-        <h2>Lo que dicen nuestros usuarios</h2>
+        <h2>Resultados Esperados</h2>
         <div className="testimonial-slider">
           <div className="testimonial-item">
             <div className="testimonial-rating">
-              <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+              <FaMoneyBillWave />
             </div>
-            <p>"Como conductora, me siento más segura sabiendo que los pasajeros están verificados. Además, las comisiones son justas."</p>
+            <p>"Reducción estimada del 60-75% en costos de energía eléctrica destinados al alumbrado público en la zona piloto."</p>
             <div className="testimonial-author">
-              <h4>Laura Mendoza</h4>
-              <p>Conductora desde 2023</p>
+              <h4>Ahorro Económico</h4>
+              <p>Impacto Financiero</p>
             </div>
           </div>
           <div className="testimonial-item">
             <div className="testimonial-rating">
-              <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+              <FaLeaf />
             </div>
-            <p>"Por fin una app donde puedo compartir mi ubicación con mi familia mientras viajo. El botón de pánico me da tranquilidad adicional."</p>
+            <p>"Disminución significativa de la huella de carbono y contribución a los objetivos de sostenibilidad ambiental."</p>
             <div className="testimonial-author">
-              <h4>Martín Flores</h4>
-              <p>Usuario frecuente</p>
+              <h4>Impacto Ambiental</h4>
+              <p>Sostenibilidad</p>
             </div>
           </div>
           <div className="testimonial-item">
             <div className="testimonial-rating">
-              <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+              <FaRocket />
             </div>
-            <p>"Después de probar otras aplicaciones, ViajeSeguro es la única que realmente prioriza la seguridad. Los conductores son profesionales."</p>
+            <p>"Mejora en la eficiencia operativa y posicionamiento como ciudad pionera en tecnologías inteligentes."</p>
             <div className="testimonial-author">
-              <h4>Carla Iriarte</h4>
-              <p>Usuaria desde 2024</p>
+              <h4>Innovación Tecnológica</h4>
+              <p>Modernización Urbana</p>
             </div>
           </div>
         </div>
@@ -238,72 +273,35 @@ const Home = () => {
         <h2>Preguntas Frecuentes</h2>
         <div className="faq-list">
           <div>
-            <FaQuestionCircle className="icon" />
-            <h4>¿Qué necesito para registrarme como conductor?</h4>
-            <p>Documento de identidad vigente, licencia de conducir actualizada, SOAT al día, inspección técnica del vehículo y un smartphone con GPS.</p>
+            <FaLightbulb className="icon" />
+            <h4>¿Qué tipo de sensores utiliza el sistema?</h4>
+            <p>Sensores de luminosidad para detectar condiciones ambientales y sensores de movimiento para optimizar el encendido según la presencia de personas.</p>
           </div>
           <div>
-            <FaQuestionCircle className="icon" />
-            <h4>¿Qué pasa si tengo una emergencia durante el viaje?</h4>
-            <p>Puedes activar el botón de emergencia en la app, que notifica automáticamente a nuestro equipo de soporte y a tus contactos de confianza con tu ubicación exacta.</p>
+            <FaWifi className="icon" />
+            <h4>¿Cómo se comunican los dispositivos?</h4>
+            <p>A través de una red IP local que conecta todos los microcontroladores con el servidor central para transmisión de datos en tiempo real.</p>
           </div>
           <div>
-            <FaQuestionCircle className="icon" />
-            <h4>¿Cómo garantiza mi seguridad ViajeSeguro?</h4>
-            <p>Todos los conductores pasan por un proceso de verificación manual, cada viaje es monitoreado en tiempo real, y puedes compartir tu ruta con contactos de confianza.</p>
+            <FaShieldAlt className="icon" />
+            <h4>¿Qué pasa si falla una luminaria?</h4>
+            <p>El sistema detecta automáticamente las fallas y envía alertas inmediatas al dashboard de administración para una respuesta rápida.</p>
           </div>
           <div>
-            <FaQuestionCircle className="icon" />
-            <h4>¿ViajeSeguro funciona en toda Bolivia?</h4>
-            <p>Actualmente operamos en La Paz, Santa Cruz y Cochabamba, con planes de expansión a todas las ciudades principales del país durante 2025.</p>
+            <FaMapMarkedAlt className="icon" />
+            <h4>¿Cuál es el área de cobertura del proyecto?</h4>
+            <p>La implementación piloto cubre aproximadamente 5 cuadras en Villa Adela, Distrito 2 de El Alto, con posibilidad de expansión.</p>
           </div>
           <div>
-            <FaQuestionCircle className="icon" />
-            <h4>¿Cómo se calculan las tarifas?</h4>
-            <p>Las tarifas se calculan en base a la distancia, tiempo estimado de viaje y tipo de vehículo. Siempre verás el precio final antes de confirmar tu viaje.</p>
+            <FaBolt className="icon" />
+            <h4>¿Cuánto ahorro energético se espera?</h4>
+            <p>Se estima una reducción del 60-75% en el consumo energético mediante la automatización inteligente del sistema de alumbrado.</p>
           </div>
           <div>
-            <FaQuestionCircle className="icon" />
-            <h4>¿Puedo pagar en efectivo?</h4>
-            <p>Sí, aceptamos pagos en efectivo, tarjetas de crédito/débito y pagos a través de billeteras digitales como Tigo Money y QR Simple.</p>
+            <FaMobileAlt className="icon" />
+            <h4>¿Se puede controlar desde dispositivos móviles?</h4>
+            <p>Sí, el dashboard web es responsive y se puede acceder desde cualquier dispositivo con navegador web.</p>
           </div>
-        </div>
-      </section>
-
-      {/* APP FEATURES - NUEVA SECCIÓN */}
-      <section className="app-features">
-        <h2>Características destacadas de nuestra app</h2>
-        <div className="app-features-container">
-          <div className="app-feature-item">
-            <FaLock className="app-feature-icon" />
-            <h3>Verificación de Identidad</h3>
-            <p>Tanto conductores como pasajeros verifican su identidad para mayor seguridad.</p>
-          </div>
-          <div className="app-feature-item">
-            <FaMapMarkedAlt className="app-feature-icon" />
-            <h3>Seguimiento en Tiempo Real</h3>
-            <p>Comparte tu ubicación con familiares o amigos durante todo el trayecto.</p>
-          </div>
-          <div className="app-feature-item">
-            <FaHeadset className="app-feature-icon" />
-            <h3>Soporte 24/7</h3>
-            <p>Atención al cliente disponible todo el día, todos los días de la semana.</p>
-          </div>
-          <div className="app-feature-item">
-            <FaRocket className="app-feature-icon" />
-            <h3>Interfaz Intuitiva</h3>
-            <p>Diseñada para ser fácil de usar por cualquier persona.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA FINAL */}
-      <section className="cta-final">
-        <h2>Únete hoy a la movilidad segura</h2>
-        <p>Haz parte de la red de usuarios que confían en ViajeSeguro para sus trayectos diarios. Ya somos más de 10,000 usuarios satisfechos en toda Bolivia.</p>
-        <div className="hero-buttons">
-          <a href="https://play.google.com" className="btn-primary">Descargar App</a>
-          <a href="/contact" className="btn-secondary">Contactar Soporte</a>
         </div>
       </section>
 

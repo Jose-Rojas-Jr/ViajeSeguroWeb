@@ -126,7 +126,7 @@ const Contact = () => {
                 <FaEnvelope className="info-icon" />
               </div>
               <h3>Email</h3>
-              <p>soporte@viajeseguro.com</p>
+              <p>soporte@SmartLight.com</p>
               <p className="info-detail">Respuesta en menos de 24 horas</p>
               <p className="info-detail">Soporte disponible 24/7</p>
               <a href="mailto:soporte@viajeseguro.com" className="info-button">Enviar email</a>
@@ -276,54 +276,9 @@ const Contact = () => {
               <div className="office-info">
                 <p><strong>Horario de atención:</strong> Lunes a Viernes 8:00 - 20:00</p>
                 <p><strong>Sábados:</strong> 9:00 - 15:00</p>
-                <p><strong>Email:</strong> soporte@viajeseguro.com</p>
+                <p><strong>Email:</strong> soporte@SmartLight.com</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* FAQ - PREGUNTAS FRECUENTES */}
-      <section className="contacto-faq">
-        <div className="content-wrapper">
-          <h2 className="section-title">Preguntas Frecuentes</h2>
-          
-          <div className="faq-container">
-            <div className="faq-item">
-              <h3>¿Cuánto tiempo tardan en responder las consultas?</h3>
-              <p>Nuestro tiempo de respuesta promedio es de menos de 24 horas para emails y mensajes. Para casos urgentes, recomendamos llamar directamente a nuestro número de soporte.</p>
-            </div>
-            
-            <div className="faq-item">
-              <h3>¿Cómo puedo reportar un problema con un viaje?</h3>
-              <p>Puedes reportar problemas directamente desde la app utilizando la opción "Reportar problema" en el historial de viajes, o contactándonos a través de cualquiera de nuestros canales de atención.</p>
-            </div>
-            
-            <div className="faq-item">
-              <h3>¿Ofrecen soporte fuera del horario de oficina?</h3>
-              <p>Sí, contamos con soporte de emergencia 24/7 a través de la aplicación y nuestro número de WhatsApp para situaciones urgentes relacionadas con viajes en curso.</p>
-            </div>
-            
-            <div className="faq-item">
-              <h3>¿Puedo solicitar una factura por mis viajes?</h3>
-              <p>Sí, puedes solicitar facturas por tus viajes a través de la app en la sección "Mis viajes" o contactando a nuestro equipo de soporte con los detalles de tu viaje.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* CTA FINAL */}
-      <section className="contacto-cta">
-        <div className="content-wrapper">
-          <h2>¿Listo para comenzar a viajar seguro?</h2>
-          <p>Descarga nuestra aplicación y disfruta de la experiencia ViajeSeguro</p>
-          <div className="cta-buttons">
-            <a href="https://play.google.com" className="cta-button primary" target="_blank" rel="noopener noreferrer">
-              Descargar la App
-            </a>
-            <a href="#contacto-form" className="cta-button secondary">
-              Enviar consulta
-            </a>
           </div>
         </div>
       </section>
