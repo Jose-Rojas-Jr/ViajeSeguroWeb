@@ -62,7 +62,7 @@ const Home = () => {
       {/* HERO */}
       <section id="home" className="hero">
         <div className="hero-content">
-          <h1>Iluminación Inteligente para El Alto</h1>
+          <h1>Tecnología que ilumina, eficiencia que transforma</h1>
           <p>Sistema automatizado de gestión energética que optimiza el alumbrado público mediante IoT, reduciendo costos y mejorando la eficiencia urbana</p>
           <div className="hero-buttons">
             <a href="/proyecto" className="btn-primary">Ver Proyecto</a>
