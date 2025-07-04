@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import firebaseApp from "./firebase";
-import Conductor from './components/Conductor';
 import Services from './components/Services';
 import Nosotros from './components/Nosotros';
 import Proyecto from './components/Proyecto';
@@ -15,7 +14,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/Proyecto" element={<Proyecto/>} />
-        <Route path="/Conductor" element={<Conductor/>} />
         <Route path="/Nosotros" element={<Nosotros/>} />
         <Route path="/Contact" element={<Contact />} />
         
