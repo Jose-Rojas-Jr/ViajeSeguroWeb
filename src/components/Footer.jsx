@@ -246,7 +246,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Columna de contacto */}
+        {/* Columna de contactos */}
         <div>
           <h4 style={{
             color: 'var(--primary-light)',

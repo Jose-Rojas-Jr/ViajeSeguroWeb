@@ -1,9 +1,0 @@
-/* Sección About */
-.about {
-  background-color: var(--background-light);
-  color: var(--secondary-color);
-}
-
-.content {
-  max-width: 60%;
-}
