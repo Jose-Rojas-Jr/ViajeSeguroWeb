@@ -4,7 +4,8 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { 
   FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, 
-  FaFacebookMessenger, FaInstagram, FaCheck, FaExclamationTriangle
+  FaFacebookMessenger, FaInstagram, FaCheck, FaExclamationTriangle,
+  FaClock, FaHeadset, FaShieldAlt
 } from 'react-icons/fa';
 
 const Contact = () => {
@@ -25,8 +26,7 @@ const Contact = () => {
 
   // Efecto para animaciones al hacer scroll
   useEffect(() => {
-    const sections = document.querySelectorAll('section');
-    const elements = document.querySelectorAll('.info-item, .form-container, .map-container, .faq-item');
+    const sections = document.querySelectorAll('.contacto-container section');
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -39,15 +39,37 @@ const Contact = () => {
     sections.forEach(section => {
       observer.observe(section);
     });
+
+    // Efecto de onda para botones
+    const btns = document.querySelectorAll('.hero-button, .info-button, .social-button, .submit-button');
     
-    elements.forEach(element => {
-      observer.observe(element);
+    btns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const x = e.clientX - e.target.getBoundingClientRect().left;
+        const y = e.clientY - e.target.getBoundingClientRect().top;
+        
+        const ripple = document.createElement('span');
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
     });
 
     return () => {
       observer.disconnect();
     };
   }, []);
+
+  // Función para hacer scroll suave hacia una sección
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  };
 
   // Manejar cambios en los inputs
   const handleChange = (e) => {
@@ -62,12 +84,21 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Aquí se podría agregar la lógica real para enviar el formulario
+    // Validación básica
+    if (!formData.nombre || !formData.email || !formData.asunto || !formData.mensaje) {
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: 'Por favor, completa todos los campos obligatorios.'
+      });
+      return;
+    }
+    
     // Simulación de envío exitoso
     setFormStatus({
       submitted: true,
       success: true,
-      message: '¡Tu mensaje ha sido enviado! Nos pondremos en contacto contigo lo antes posible.'
+      message: '¡Tu mensaje ha sido enviado exitosamente! Nos pondremos en contacto contigo lo antes posible.'
     });
     
     // Resetear el formulario después de 5 segundos
@@ -91,90 +122,134 @@ const Contact = () => {
     <div className="contacto-container">
       <Navbar />
       
-      {/* HERO */}
+      {/* HERO - ÚNICA SECCIÓN CON FONDO AZUL */}
       <section className="contacto-hero">
         <div className="hero-content">
-          <h1>Contáctanos</h1>
-          <p>Estamos aquí para ayudarte. Tu seguridad y satisfacción son nuestra prioridad.</p>
+          <h1 className="heading-hero">                  Contáctanos</h1>
+          <p className="text-lead">
+            Estamos aquí para ayudarte con cualquier consulta sobre SmartLight El Alto. 
+            Tu satisfacción y el éxito de tu proyecto son nuestra prioridad.
+          </p>
           <div className="hero-buttons">
-            <a href="#contacto-form" className="hero-button">Enviar mensaje</a>
-            <a href="tel:+59178795918" className="hero-button secondary">
-              <FaPhone className="button-icon" /> Llamar ahora
+            <a 
+              href="#contacto-form" 
+              className="hero-button btn btn-primary btn-lg"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('contacto-form');
+              }}
+            >
+              Enviar Mensaje
+            </a>
+            <a href="tel:+59178795918" className="hero-button secondary btn btn-lg">
+              <FaPhone className="button-icon" /> Llamar Ahora
             </a>
           </div>
         </div>
       </section>
       
       {/* INFORMACIÓN DE CONTACTO */}
-      <section className="contacto-info">
-        <div className="content-wrapper">
-          <h2 className="section-title">Medios de Contacto</h2>
+      <section className="contacto-info section">
+        <div className="container">
+          <h2 className="heading-section">Medios de Contacto</h2>
           <div className="info-container">
-            <div className="info-item">
+            <div className="info-item card card-gradient-border">
               <div className="info-icon-container">
                 <FaPhone className="info-icon" />
               </div>
-              <h3>Teléfono</h3>
-              <p>+591 78795918</p>
-              <p className="info-detail">Lunes a Viernes: 8:00 - 20:00</p>
-              <p className="info-detail">Sábados: 9:00 - 15:00</p>
-              <a href="tel:+59178795918" className="info-button">Llamar ahora</a>
+              <h3 className="heading-card">Teléfono Directo</h3>
+              <p className="text-body">+591 78795918</p>
+              <p className="info-detail text-small">
+                <FaClock style={{ marginRight: '8px' }} />
+                Lunes a Viernes: 8:00 - 20:00
+              </p>
+              <p className="info-detail text-small">
+                <FaClock style={{ marginRight: '8px' }} />
+                Sábados: 9:00 - 15:00
+              </p>
+              <a href="tel:+59178795918" className="info-button btn btn-secondary btn-sm">
+                Llamar Ahora
+              </a>
             </div>
             
-            <div className="info-item">
+            <div className="info-item card card-gradient-border">
               <div className="info-icon-container">
                 <FaEnvelope className="info-icon" />
               </div>
-              <h3>Email</h3>
-              <p>soporte@SmartLight.com</p>
-              <p className="info-detail">Respuesta en menos de 24 horas</p>
-              <p className="info-detail">Soporte disponible 24/7</p>
-              <a href="mailto:soporte@viajeseguro.com" className="info-button">Enviar email</a>
+              <h3 className="heading-card">Email Corporativo</h3>
+              <p className="text-body">soporte@smartlight.com</p>
+              <p className="info-detail text-small">
+                <FaHeadset style={{ marginRight: '8px' }} />
+                Respuesta en menos de 24 horas
+              </p>
+              <p className="info-detail text-small">
+                <FaShieldAlt style={{ marginRight: '8px' }} />
+                Soporte técnico especializado
+              </p>
+              <a href="mailto:soporte@smartlight.com" className="info-button btn btn-secondary btn-sm">
+                Enviar Email
+              </a>
             </div>
             
-            <div className="info-item">
+            <div className="info-item card card-gradient-border">
               <div className="info-icon-container">
                 <FaMapMarkerAlt className="info-icon" />
               </div>
-              <h3>Ubicación</h3>
-              <p>Av. Montes, Plaza Pérez Velasco</p>
-              <p className="info-detail">La Paz, Bolivia</p>
-              <p className="info-detail">Código Postal: 12345</p>
+              <h3 className="heading-card">Oficina Principal</h3>
+              <p className="text-body">Av. Montes, Plaza Pérez Velasco</p>
+              <p className="info-detail text-small">La Paz, Bolivia - Zona Central</p>
+              <p className="info-detail text-small">Edificio SmartLight, Piso 3</p>
               <a 
-                href="https://maps.google.com/?q=Av. Montes, Plaza Pérez Velasco, La Paz, Bolivia" 
+                href="https://maps.google.com/?q=Plaza Pérez Velasco, La Paz, Bolivia" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="info-button"
+                className="info-button btn btn-secondary btn-sm"
               >
-                Ver en mapa
+                Ver en Mapa
               </a>
             </div>
           </div>
           
           <div className="social-container">
-            <h3>También puedes contactarnos por:</h3>
+            <h3 className="heading-card">También puedes contactarnos por:</h3>
             <div className="social-buttons">
               <a 
-                href="https://wa.me/59178795918" 
+                href="https://wa.me/59178795918?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20SmartLight%20El%20Alto" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="social-button whatsapp"
               >
-                <FaWhatsapp className="social-icon" /> WhatsApp
+                <FaWhatsapp className="social-icon" /> WhatsApp Business
               </a>
               
-    
+              <a 
+                href="https://m.me/smartlightelalto" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="social-button messenger"
+              >
+                <FaFacebookMessenger className="social-icon" /> Messenger
+              </a>
+              
+              <a 
+                href="https://instagram.com/smartlightelalto" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="social-button instagram"
+              >
+                <FaInstagram className="social-icon" /> Instagram
+              </a>
             </div>
           </div>
         </div>
       </section>
       
       {/* FORMULARIO DE CONTACTO */}
-      <section id="contacto-form" className="contacto-form">
-        <div className="content-wrapper">
+      <section id="contacto-form" className="contacto-form section">
+        <div className="container">
           <div className="form-map-container">
-            <div className="form-container">
-              <h2 className="section-title">Envíanos un Mensaje</h2>
+            <div className="form-container card card-gradient-border">
+              <h2 className="heading-section">Envíanos un Mensaje</h2>
               {formStatus.submitted ? (
                 <div className={`form-message ${formStatus.success ? 'success' : 'error'}`}>
                   {formStatus.success ? (
@@ -182,26 +257,27 @@ const Contact = () => {
                   ) : (
                     <FaExclamationTriangle className="message-icon" />
                   )}
-                  <p>{formStatus.message}</p>
+                  <p className="text-body">{formStatus.message}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
                   <div className="form-group">
-                    <label htmlFor="nombre">Nombre completo</label>
+                    <label htmlFor="nombre" className="text-small">Nombre completo *</label>
                     <input
                       type="text"
                       id="nombre"
                       name="nombre"
                       value={formData.nombre}
                       onChange={handleChange}
-                      placeholder="Ingresa tu nombre"
+                      placeholder="Ingresa tu nombre completo"
                       required
+                      className="focus-visible"
                     />
                   </div>
                   
                   <div className="form-row">
                     <div className="form-group">
-                      <label htmlFor="email">Email</label>
+                      <label htmlFor="email" className="text-small">Email *</label>
                       <input
                         type="email"
                         id="email"
@@ -210,24 +286,26 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="tu@email.com"
                         required
+                        className="focus-visible"
                       />
                     </div>
                     
                     <div className="form-group">
-                      <label htmlFor="telefono">Teléfono</label>
+                      <label htmlFor="telefono" className="text-small">Teléfono (opcional)</label>
                       <input
                         type="tel"
                         id="telefono"
                         name="telefono"
                         value={formData.telefono}
                         onChange={handleChange}
-                        placeholder="Tu número de contacto"
+                        placeholder="+591 XXXXXXXX"
+                        className="focus-visible"
                       />
                     </div>
                   </div>
                   
                   <div className="form-group">
-                    <label htmlFor="asunto">Asunto</label>
+                    <label htmlFor="asunto" className="text-small">Asunto *</label>
                     <input
                       type="text"
                       id="asunto"
@@ -236,34 +314,36 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="¿En qué podemos ayudarte?"
                       required
+                      className="focus-visible"
                     />
                   </div>
                   
                   <div className="form-group">
-                    <label htmlFor="mensaje">Mensaje</label>
+                    <label htmlFor="mensaje" className="text-small">Mensaje *</label>
                     <textarea
                       id="mensaje"
                       name="mensaje"
                       value={formData.mensaje}
                       onChange={handleChange}
-                      placeholder="Escribe tu mensaje aquí..."
+                      placeholder="Describe tu consulta, proyecto o necesidad específica..."
                       rows="5"
                       required
+                      className="focus-visible"
                     ></textarea>
                   </div>
                   
-                  <button type="submit" className="submit-button">
-                    Enviar mensaje
+                  <button type="submit" className="submit-button btn btn-secondary btn-lg">
+                    Enviar Mensaje
                   </button>
                 </form>
               )}
             </div>
             
-            <div className="map-container">
-              <h3>Nuestra oficina</h3>
+            <div className="map-container card card-gradient-border">
+              <h3 className="heading-card">Nuestra Ubicación</h3>
               <div className="map">
                 <iframe
-                  title="Ubicación de ViajeSeguro"
+                  title="Ubicación SmartLight El Alto - Plaza Pérez Velasco"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.4057860662384!2d-68.14296328513696!3d-16.495908688618393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edec1dc1d0393%3A0xce7521a126fa8c2!2sPlaza%20P%C3%A9rez%20Velasco%2C%20La%20Paz!5e0!3m2!1ses!2sbo!4v1654651234567!5m2!1ses!2sbo"
                   width="100%"
                   height="350"
@@ -274,9 +354,21 @@ const Contact = () => {
                 ></iframe>
               </div>
               <div className="office-info">
-                <p><strong>Horario de atención:</strong> Lunes a Viernes 8:00 - 20:00</p>
-                <p><strong>Sábados:</strong> 9:00 - 15:00</p>
-                <p><strong>Email:</strong> soporte@SmartLight.com</p>
+                <p className="text-small">
+                  <strong>Horario de Atención:</strong><br />
+                  Lunes a Viernes: 8:00 - 20:00<br />
+                  Sábados: 9:00 - 15:00
+                </p>
+                <p className="text-small">
+                  <strong>Servicios Disponibles:</strong><br />
+                  • Consultoría técnica especializada<br />
+                  • Demostraciones del sistema<br />
+                  • Soporte post-implementación
+                </p>
+                <p className="text-small">
+                  <strong>Email:</strong> soporte@smartlight.com<br />
+                  <strong>WhatsApp:</strong> +591 78795918
+                </p>
               </div>
             </div>
           </div>

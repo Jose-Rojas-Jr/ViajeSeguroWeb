@@ -1,18 +1,25 @@
-/* VARIABLES CON LA NUEVA PALETA DE COLORES */
 :root {
+  /* Paleta de Colores Principal */
   --primary-dark: #0f172a;        /* Azul Oscuro Profundo */
   --primary-light: #fbbf24;       /* Amarillo Luz */
   --secondary-blue: #1e293b;      /* Azul Gris */
   --secondary-green: #10b981;     /* Verde Eficiencia */
   --neutral-light: #f8fafc;       /* Blanco Suave */
   --neutral-dark: #64748b;        /* Gris Neutral */
-  --text-main: var(--primary-dark);
-  --text-light: var(--neutral-dark);
-  --border-color: rgba(15, 23, 42, 0.1);
-  --transition-ease: all 0.3s ease-in-out;
-  --shadow-soft: 0 4px 15px rgba(15, 23, 42, 0.1);
-  --shadow-medium: 0 8px 25px rgba(15, 23, 42, 0.15);
-  --shadow-strong: 0 15px 35px rgba(15, 23, 42, 0.2);
+  
+  /* Sistema de Colores Semánticos */
+  --text-primary: var(--primary-dark);
+  --text-secondary: var(--neutral-dark);
+  --text-on-dark: var(--neutral-light);
+  --text-muted: rgba(248, 250, 252, 0.7);
+  --text-emphasis: var(--primary-light);
+  
+  /* Colores de Superficie */
+  --surface-primary: #ffffff;
+  --surface-secondary: var(--neutral-light);
+  --surface-dark: var(--primary-dark);
+  --surface-overlay: rgba(248, 250, 252, 0.95);
+  
 }
 
 /* NAVBAR */

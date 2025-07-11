@@ -69,17 +69,20 @@ const Nosotros = () => {
     };
   }, []);
 
-
   return (
     <div className="nosotros-container">
       <Navbar />
 
-      {/* HERO NOSOTROS */}
+      {/* HERO NOSOTROS - ÚNICA SECCIÓN CON FONDO AZUL */}
       <section className="nosotros-hero">
         <div className="hero-overlay">
           <div className="hero-content">
-            <h1>Conoce a SmartLight</h1>
-            <p>Un equipo de ingenieros comprometidos con la innovación tecnológica y la sostenibilidad urbana, desarrollando soluciones inteligentes para el futuro de nuestras ciudades.</p>
+            <h1 className="heading-hero">                 Conoce a SmartLight</h1>
+            <p className="text-lead">
+              Un equipo de ingenieros comprometidos con la innovación tecnológica y la 
+              sostenibilidad urbana, desarrollando soluciones inteligentes para el futuro 
+              de nuestras ciudades bolivianas.
+            </p>
             <div className="hero-stats">
               <div className="hero-stat">
                 <FaUniversity className="stat-icon" />
@@ -99,16 +102,23 @@ const Nosotros = () => {
       </section>
 
       {/* QUIÉNES SOMOS */}
-      <section className="quienes-somos">
+      <section className="quienes-somos section">
         <div className="container">
-          <h2>¿Quiénes Somos?</h2>
+          <h2 className="heading-section">¿Quiénes Somos?</h2>
           <div className="intro-content">
             <div className="intro-text">
-              <p>
-                Somos una empresa emergente de tecnología fundada por un equipo de ingenieros especializados en desarrollo de software y sistemas IoT. Nuestra misión es revolucionar la infraestructura urbana mediante soluciones tecnológicas innovadoras que generen impacto real en las comunidades.
+              <p className="text-lead">
+                Somos una empresa emergente de tecnología fundada por un equipo de ingenieros 
+                especializados en desarrollo de software y sistemas IoT. Nuestra misión es 
+                revolucionar la infraestructura urbana mediante soluciones tecnológicas 
+                innovadoras que generen impacto real en las comunidades.
               </p>
-              <p>
-                Especializados en desarrollo de microservicios, sistemas de gestión inteligente y tecnologías IoT, combinamos conocimientos técnicos sólidos con aplicaciones prácticas innovadoras. Nuestro enfoque empresarial busca crear soluciones que no solo resuelvan desafíos urbanos actuales, sino que también establezcan las bases para las ciudades inteligentes del futuro.
+              <p className="text-body">
+                Especializados en desarrollo de microservicios, sistemas de gestión inteligente 
+                y tecnologías IoT, combinamos conocimientos técnicos sólidos con aplicaciones 
+                prácticas innovadoras. Nuestro enfoque empresarial busca crear soluciones que 
+                no solo resuelvan desafíos urbanos actuales, sino que también establezcan las 
+                bases para las ciudades inteligentes del futuro.
               </p>
             </div>
             <div className="intro-visual">
@@ -126,38 +136,41 @@ const Nosotros = () => {
       </section>
 
       {/* MISIÓN, VISIÓN Y VALORES */}
-      <section className="mision-vision-valores">
+      <section className="mision-vision-valores section">
         <div className="container">
+          <h2 className="heading-section">Nuestos Valores</h2>
           <div className="mvv-grid">
-            <div className="mvv-card mision">
+            <div className="mvv-card card card-gradient-border">
               <div className="mvv-icon">
                 <FaBullseye />
               </div>
-              <h3>Nuestra Misión</h3>
-              <p>
-                Desarrollar e implementar sistemas tecnológicos inteligentes que optimicen la gestión de recursos 
-                urbanos, promoviendo la eficiencia energética y contribuyendo al desarrollo sostenible de las 
-                ciudades bolivianas, comenzando por El Alto.
+              <h3 className="heading-card">Nuestra Misión</h3>
+              <p className="text-body">
+                Desarrollar e implementar sistemas tecnológicos inteligentes que optimicen 
+                la gestión de recursos urbanos, promoviendo la eficiencia energética y 
+                contribuyendo al desarrollo sostenible de las ciudades bolivianas, 
+                comenzando por El Alto.
               </p>
             </div>
             
-            <div className="mvv-card vision">
+            <div className="mvv-card card card-gradient-border">
               <div className="mvv-icon">
                 <FaEye />
               </div>
-              <h3>Nuestra Visión</h3>
-              <p>
-                Ser reconocidos como pioneros en el desarrollo de soluciones de ciudades inteligentes en Bolivia, 
-                estableciendo un modelo replicable de gestión tecnológica urbana que inspire la transformación 
-                digital en múltiples municipios del país.
+              <h3 className="heading-card">Nuestra Visión</h3>
+              <p className="text-body">
+                Ser reconocidos como pioneros en el desarrollo de soluciones de ciudades 
+                inteligentes en Bolivia, estableciendo un modelo replicable de gestión 
+                tecnológica urbana que inspire la transformación digital en múltiples 
+                municipios del país.
               </p>
             </div>
             
-            <div className="mvv-card valores">
+            <div className="mvv-card card card-gradient-border">
               <div className="mvv-icon">
                 <FaHeart />
               </div>
-              <h3>Nuestros Valores</h3>
+              <h3 className="heading-card">Nuestros Valores</h3>
               <div className="valores-list">
                 <div className="valor-item">
                   <FaRocket className="valor-icon" />
@@ -190,32 +203,35 @@ const Nosotros = () => {
       </section>
 
       {/* ESTADÍSTICAS DE LA EMPRESA */}
-      <section className="company-stats">
+      <section className="company-stats section">
         <div className="container">
-          <h2>Nuestro Impacto en Números</h2>
+          <h2 className="heading-section">Nuestro Impacto en Números</h2>
           <div className="stats-grid">
-            <div className="stat-item">
+            <div className="stat-item card">
               <div className="stat-number">
                 <span className="counter" data-target="2" data-suffix="">2</span>
               </div>
               <div className="stat-label">Ingenieros Especializados</div>
               <div className="stat-description">Expertos en IoT y Desarrollo</div>
             </div>
-            <div className="stat-item">
+            
+            <div className="stat-item card">
               <div className="stat-number">
                 <span className="counter" data-target="5" data-suffix="">5</span>
               </div>
               <div className="stat-label">Cuadras de Cobertura</div>
               <div className="stat-description">Área Piloto Villa Adela</div>
             </div>
-            <div className="stat-item">
+            
+            <div className="stat-item card">
               <div className="stat-number">
                 <span className="counter" data-target="75" data-suffix="%">75%</span>
               </div>
               <div className="stat-label">Eficiencia Energética</div>
               <div className="stat-description">Ahorro Proyectado</div>
             </div>
-            <div className="stat-item">
+            
+            <div className="stat-item card">
               <div className="stat-number">
                 <span className="counter" data-target="50" data-suffix="+">50+</span>
               </div>
@@ -226,22 +242,23 @@ const Nosotros = () => {
         </div>
       </section>
 
-     
       {/* COMPROMISO CON EL ALTO */}
-      <section className="compromiso-alto">
+      <section className="compromiso-alto section">
         <div className="container">
           <div className="compromiso-content">
             <div className="compromiso-text">
-              <h2>Nuestro Compromiso con El Alto</h2>
-              <p>
-                Como estudiantes y futuros ingenieros de sistemas, entendemos la importancia de retribuir 
-                a nuestra comunidad mediante soluciones tecnológicas que generen un impacto real y positivo. 
-                El Alto, nuestra ciudad, merece contar con infraestructura inteligente y sostenible.
+              <h2 className="heading-section">Nuestro Compromiso con El Alto</h2>
+              <p className="text-body">
+                Como estudiantes y futuros ingenieros de sistemas, entendemos la importancia 
+                de retribuir a nuestra comunidad mediante soluciones tecnológicas que generen 
+                un impacto real y positivo. El Alto, nuestra ciudad, merece contar con 
+                infraestructura inteligente y sostenible.
               </p>
-              <p>
-                Este proyecto representa no solo un requisito académico, sino un compromiso genuino con el 
-                desarrollo tecnológico local. Creemos firmemente que las ciudades inteligentes comienzan 
-                con iniciativas como esta, implementadas con rigor técnico y visión de futuro.
+              <p className="text-body">
+                Este proyecto representa no solo un requisito académico, sino un compromiso 
+                genuino con el desarrollo tecnológico local. Creemos firmemente que las 
+                ciudades inteligentes comienzan con iniciativas como esta, implementadas 
+                con rigor técnico y visión de futuro.
               </p>
               <div className="compromiso-stats">
                 <div className="compromiso-stat">
@@ -258,6 +275,7 @@ const Nosotros = () => {
                 </div>
               </div>
             </div>
+            
             <div className="compromiso-visual">
               <div className="alto-illustration">
                 <FaMapMarkedAlt className="alto-icon" />

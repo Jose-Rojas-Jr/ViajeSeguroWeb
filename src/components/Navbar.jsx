@@ -118,15 +118,7 @@ const Navbar = () => {
                 Contacto
               </Link>
             </li>
-            <li>
-              <a 
-                href="/dashboard" 
-                className="dashboard-link"
-                onClick={() => setMenuOpen(false)}
-              >
-                Dashboard
-              </a>
-            </li>
+            
           </ul>
         </div>
       </nav>
